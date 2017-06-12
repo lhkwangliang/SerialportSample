@@ -127,7 +127,7 @@
             this.btnAttCompensationSave = new System.Windows.Forms.Button();
             this.btnAttCompensation = new System.Windows.Forms.Button();
             this.pvAttCompensation = new HMIControls.MyDataGridView();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -166,7 +166,7 @@
             this.lbFwVersion = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnReset1894 = new System.Windows.Forms.Button();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.txError = new System.Windows.Forms.RichTextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
@@ -193,6 +193,7 @@
             this.lbLedUnitState = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.lbLedSp = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.pvSystemThermometer = new HMIControls.ThermometerControl();
+            this.menu1894 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -203,8 +204,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pvInputPowerAd)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pvAttCompensation)).BeginInit();
-            this.tabPage6.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -237,8 +238,8 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(94, 50);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -1387,53 +1388,53 @@
             this.pvAttCompensation.TabIndex = 21;
             this.pvAttCompensation.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pvAttCompensation_DataError);
             // 
-            // tabPage6
+            // tabPage5
             // 
-            this.tabPage6.BackColor = System.Drawing.Color.LightGray;
-            this.tabPage6.Controls.Add(this.button5);
-            this.tabPage6.Controls.Add(this.button4);
-            this.tabPage6.Controls.Add(this.button3);
-            this.tabPage6.Controls.Add(this.button2);
-            this.tabPage6.Controls.Add(this.button1);
-            this.tabPage6.Controls.Add(this.comboBox2);
-            this.tabPage6.Controls.Add(this.label46);
-            this.tabPage6.Controls.Add(this.textBox2);
-            this.tabPage6.Controls.Add(this.textBox1);
-            this.tabPage6.Controls.Add(this.label45);
-            this.tabPage6.Controls.Add(this.label44);
-            this.tabPage6.Controls.Add(this.comboBox1);
-            this.tabPage6.Controls.Add(this.label43);
-            this.tabPage6.Controls.Add(this.label41);
-            this.tabPage6.Controls.Add(this.label42);
-            this.tabPage6.Controls.Add(this.label39);
-            this.tabPage6.Controls.Add(this.label40);
-            this.tabPage6.Controls.Add(this.label37);
-            this.tabPage6.Controls.Add(this.label38);
-            this.tabPage6.Controls.Add(this.label35);
-            this.tabPage6.Controls.Add(this.label36);
-            this.tabPage6.Controls.Add(this.label33);
-            this.tabPage6.Controls.Add(this.label34);
-            this.tabPage6.Controls.Add(this.label31);
-            this.tabPage6.Controls.Add(this.label32);
-            this.tabPage6.Controls.Add(this.label29);
-            this.tabPage6.Controls.Add(this.label30);
-            this.tabPage6.Controls.Add(this.label27);
-            this.tabPage6.Controls.Add(this.label28);
-            this.tabPage6.Controls.Add(this.label25);
-            this.tabPage6.Controls.Add(this.label26);
-            this.tabPage6.Controls.Add(this.label23);
-            this.tabPage6.Controls.Add(this.label24);
-            this.tabPage6.Controls.Add(this.label10);
-            this.tabPage6.Controls.Add(this.label16);
-            this.tabPage6.Controls.Add(this.lbFwVersion);
-            this.tabPage6.Controls.Add(this.label9);
-            this.tabPage6.Controls.Add(this.btnReset1894);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(834, 476);
-            this.tabPage6.TabIndex = 7;
-            this.tabPage6.Text = "1894";
+            this.tabPage5.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage5.Controls.Add(this.button5);
+            this.tabPage5.Controls.Add(this.button4);
+            this.tabPage5.Controls.Add(this.button3);
+            this.tabPage5.Controls.Add(this.button2);
+            this.tabPage5.Controls.Add(this.button1);
+            this.tabPage5.Controls.Add(this.comboBox2);
+            this.tabPage5.Controls.Add(this.label46);
+            this.tabPage5.Controls.Add(this.textBox2);
+            this.tabPage5.Controls.Add(this.textBox1);
+            this.tabPage5.Controls.Add(this.label45);
+            this.tabPage5.Controls.Add(this.label44);
+            this.tabPage5.Controls.Add(this.comboBox1);
+            this.tabPage5.Controls.Add(this.label43);
+            this.tabPage5.Controls.Add(this.label41);
+            this.tabPage5.Controls.Add(this.label42);
+            this.tabPage5.Controls.Add(this.label39);
+            this.tabPage5.Controls.Add(this.label40);
+            this.tabPage5.Controls.Add(this.label37);
+            this.tabPage5.Controls.Add(this.label38);
+            this.tabPage5.Controls.Add(this.label35);
+            this.tabPage5.Controls.Add(this.label36);
+            this.tabPage5.Controls.Add(this.label33);
+            this.tabPage5.Controls.Add(this.label34);
+            this.tabPage5.Controls.Add(this.label31);
+            this.tabPage5.Controls.Add(this.label32);
+            this.tabPage5.Controls.Add(this.label29);
+            this.tabPage5.Controls.Add(this.label30);
+            this.tabPage5.Controls.Add(this.label27);
+            this.tabPage5.Controls.Add(this.label28);
+            this.tabPage5.Controls.Add(this.label25);
+            this.tabPage5.Controls.Add(this.label26);
+            this.tabPage5.Controls.Add(this.label23);
+            this.tabPage5.Controls.Add(this.label24);
+            this.tabPage5.Controls.Add(this.label10);
+            this.tabPage5.Controls.Add(this.label16);
+            this.tabPage5.Controls.Add(this.lbFwVersion);
+            this.tabPage5.Controls.Add(this.label9);
+            this.tabPage5.Controls.Add(this.btnReset1894);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(834, 476);
+            this.tabPage5.TabIndex = 7;
+            this.tabPage5.Text = "1894";
             // 
             // button5
             // 
@@ -1784,22 +1785,22 @@
             this.btnReset1894.Text = "1894复位";
             this.btnReset1894.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
+            // tabPage6
             // 
-            this.tabPage5.BackColor = System.Drawing.Color.LightGray;
-            this.tabPage5.Controls.Add(this.txError);
-            this.tabPage5.Controls.Add(this.btnClear);
-            this.tabPage5.Controls.Add(this.label17);
-            this.tabPage5.Controls.Add(this.txData);
-            this.tabPage5.Controls.Add(this.labelGetCount);
-            this.tabPage5.Controls.Add(this.txGet);
-            this.tabPage5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(834, 476);
-            this.tabPage5.TabIndex = 3;
-            this.tabPage5.Text = "日志";
+            this.tabPage6.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage6.Controls.Add(this.txError);
+            this.tabPage6.Controls.Add(this.btnClear);
+            this.tabPage6.Controls.Add(this.label17);
+            this.tabPage6.Controls.Add(this.txData);
+            this.tabPage6.Controls.Add(this.labelGetCount);
+            this.tabPage6.Controls.Add(this.txGet);
+            this.tabPage6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(834, 476);
+            this.tabPage6.TabIndex = 3;
+            this.tabPage6.Text = "日志";
             // 
             // txError
             // 
@@ -1917,7 +1918,8 @@
             this.menuUnitParam,
             this.menuVg,
             this.menuPowerSet,
-            this.menuAttCompensation});
+            this.menuAttCompensation,
+            this.menu1894});
             this.操作ToolStripMenuItem.Name = "操作ToolStripMenuItem";
             this.操作ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.操作ToolStripMenuItem.Text = "操作";
@@ -2044,6 +2046,13 @@
             this.pvSystemThermometer.Temperature = 0F;
             this.pvSystemThermometer.TempFont = new System.Drawing.Font("宋体", 12F);
             // 
+            // menu1894
+            // 
+            this.menu1894.Name = "menu1894";
+            this.menu1894.Size = new System.Drawing.Size(152, 22);
+            this.menu1894.Text = "1894功能";
+            this.menu1894.Click += new System.EventHandler(this.menu1894_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2079,10 +2088,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pvInputPowerAd)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pvAttCompensation)).EndInit();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -2118,7 +2127,7 @@
         private System.Windows.Forms.Button btnDigitalAtt;
         private System.Windows.Forms.Button btnAlcControl;
         private System.Windows.Forms.Label lblabel9;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.RichTextBox txGet;
         private System.Windows.Forms.Label labelGetCount;
         private System.Windows.Forms.Label label17;
@@ -2216,7 +2225,7 @@
         private System.Windows.Forms.Button btnExportExcel2;
         private System.Windows.Forms.Button btnImportExcel2;
         private System.Windows.Forms.ToolStripMenuItem menuLog;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Button btnReset1894;
         private System.Windows.Forms.Label lbFwVersion;
         private System.Windows.Forms.Label label9;
@@ -2255,5 +2264,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolStripMenuItem menu1894;
     }
 }

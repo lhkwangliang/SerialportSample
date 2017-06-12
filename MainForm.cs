@@ -114,8 +114,8 @@ namespace SerialportSample
             ShowTable(pvAlcPowerVoltage, null);
             ShowAttTable(pvAttCompensation, null);
 
-            loggerTabPage = tabControl1.TabPages[4];
-            tabControl1.TabPages.RemoveAt(4);
+            loggerTabPage = tabControl1.TabPages[5];
+            tabControl1.TabPages.RemoveAt(5);
         }
 
         public void ShowTable(MyDataGridView myDataGridView, List<string[]> list)
@@ -2860,11 +2860,16 @@ namespace SerialportSample
             tabControl1.SelectedIndex = 3;
         }
 
+        private void menu1894_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 4;
+        }
+
         private void menuLog_Click(object sender, EventArgs e)
         {
             if(!tabControl1.TabPages.Contains(loggerTabPage))
                 tabControl1.TabPages.Add(loggerTabPage);
-            tabControl1.SelectedIndex = 4;
+            tabControl1.SelectedIndex = 5;
         }
 
         private void menuAbout_Click(object sender, EventArgs e)
