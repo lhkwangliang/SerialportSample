@@ -2884,5 +2884,17 @@ namespace SerialportSample
 
         }
 
+        private void btnReset1894_Click(object sender, EventArgs e)
+        {
+            if (lbLedUnitState.ButtonColor != Color.Red)
+            {
+                changeUnitState(false);
+            }
+            if (connected && pollingTimer.Enabled)
+            {
+                pollingTimer.Stop();
+            }
+        }
+
     }
 }

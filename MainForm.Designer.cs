@@ -34,7 +34,6 @@
             this.btnConn = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pvAlcGainEnabled = new HMIControls.SwitchButton();
             this.pvAlcControl = new System.Windows.Forms.TextBox();
             this.pvDigitalAtt = new System.Windows.Forms.TextBox();
             this.btnProductSerial = new System.Windows.Forms.Button();
@@ -51,15 +50,9 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.lblOverTemperatureAlarm = new System.Windows.Forms.Label();
-            this.pvOverTemperatureAlarm = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.pvAlcVoltage = new HMIControls.MyTrackBar();
-            this.pvGainVoltage1 = new HMIControls.MyTrackBar();
-            this.pvVSWRAlarm = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.pvOverPowerAlarm = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.pvPowerModuleAlarm = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.btnAlcControl = new System.Windows.Forms.Button();
             this.btnDigitalAtt = new System.Windows.Forms.Button();
             this.pvPowerSwitch = new System.Windows.Forms.Button();
@@ -81,19 +74,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pvVgEnabled = new HMIControls.SwitchButton();
-            this.pvVgVoltage12 = new HMIControls.MyTrackBar();
-            this.pvVgVoltage11 = new HMIControls.MyTrackBar();
-            this.pvVgVoltage10 = new HMIControls.MyTrackBar();
-            this.pvVgVoltage9 = new HMIControls.MyTrackBar();
-            this.pvVgVoltage8 = new HMIControls.MyTrackBar();
-            this.pvVgVoltage7 = new HMIControls.MyTrackBar();
-            this.pvVgVoltage6 = new HMIControls.MyTrackBar();
-            this.pvVgVoltage5 = new HMIControls.MyTrackBar();
-            this.pvVgVoltage4 = new HMIControls.MyTrackBar();
-            this.pvVgVoltage3 = new HMIControls.MyTrackBar();
-            this.pvVgVoltage2 = new HMIControls.MyTrackBar();
-            this.pvVgVoltage1 = new HMIControls.MyTrackBar();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pvIncidentPowerVoltage1 = new System.Windows.Forms.TextBox();
             this.pvOutputPowerVoltage1 = new System.Windows.Forms.TextBox();
@@ -116,17 +96,11 @@
             this.label97 = new System.Windows.Forms.Label();
             this.pvInputPower1 = new System.Windows.Forms.TextBox();
             this.label96 = new System.Windows.Forms.Label();
-            this.pvAlcVoltage1 = new HMIControls.MyTrackBar();
-            this.pvAlcPowerVoltage = new HMIControls.MyDataGridView();
-            this.pvIncidentPowerAd = new HMIControls.MyDataGridView();
-            this.pvOutputPowerAd = new HMIControls.MyDataGridView();
-            this.pvInputPowerAd = new HMIControls.MyDataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnExportExcel2 = new System.Windows.Forms.Button();
             this.btnImportExcel2 = new System.Windows.Forms.Button();
             this.btnAttCompensationSave = new System.Windows.Forms.Button();
             this.btnAttCompensation = new System.Windows.Forms.Button();
-            this.pvAttCompensation = new HMIControls.MyDataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -190,23 +164,49 @@
             this.menuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbSystemTemperature = new System.Windows.Forms.Label();
+            this.menu1894 = new System.Windows.Forms.ToolStripMenuItem();
             this.lbLedUnitState = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.lbLedSp = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.pvSystemThermometer = new HMIControls.ThermometerControl();
-            this.menu1894 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pvAlcGainEnabled = new HMIControls.SwitchButton();
+            this.pvOverTemperatureAlarm = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.pvAlcVoltage = new HMIControls.MyTrackBar();
+            this.pvGainVoltage1 = new HMIControls.MyTrackBar();
+            this.pvVSWRAlarm = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.pvOverPowerAlarm = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.pvPowerModuleAlarm = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.pvVgEnabled = new HMIControls.SwitchButton();
+            this.pvVgVoltage12 = new HMIControls.MyTrackBar();
+            this.pvVgVoltage11 = new HMIControls.MyTrackBar();
+            this.pvVgVoltage10 = new HMIControls.MyTrackBar();
+            this.pvVgVoltage9 = new HMIControls.MyTrackBar();
+            this.pvVgVoltage8 = new HMIControls.MyTrackBar();
+            this.pvVgVoltage7 = new HMIControls.MyTrackBar();
+            this.pvVgVoltage6 = new HMIControls.MyTrackBar();
+            this.pvVgVoltage5 = new HMIControls.MyTrackBar();
+            this.pvVgVoltage4 = new HMIControls.MyTrackBar();
+            this.pvVgVoltage3 = new HMIControls.MyTrackBar();
+            this.pvVgVoltage2 = new HMIControls.MyTrackBar();
+            this.pvVgVoltage1 = new HMIControls.MyTrackBar();
+            this.pvAlcVoltage1 = new HMIControls.MyTrackBar();
+            this.pvAlcPowerVoltage = new HMIControls.MyDataGridView();
+            this.pvIncidentPowerAd = new HMIControls.MyDataGridView();
+            this.pvOutputPowerAd = new HMIControls.MyDataGridView();
+            this.pvInputPowerAd = new HMIControls.MyDataGridView();
+            this.pvAttCompensation = new HMIControls.MyDataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pvAlcPowerVoltage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvIncidentPowerAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvOutputPowerAd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pvInputPowerAd)).BeginInit();
-            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pvAttCompensation)).BeginInit();
-            this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnOpenClose
@@ -301,19 +301,6 @@
             this.tabPage1.Size = new System.Drawing.Size(834, 476);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "设备参数";
-            // 
-            // pvAlcGainEnabled
-            // 
-            this.pvAlcGainEnabled.ButtonState = true;
-            this.pvAlcGainEnabled.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pvAlcGainEnabled.ImageIndex = 1;
-            this.pvAlcGainEnabled.Location = new System.Drawing.Point(734, 288);
-            this.pvAlcGainEnabled.Name = "pvAlcGainEnabled";
-            this.pvAlcGainEnabled.Size = new System.Drawing.Size(75, 23);
-            this.pvAlcGainEnabled.TabIndex = 72;
-            this.pvAlcGainEnabled.Text = "自动";
-            this.pvAlcGainEnabled.UseVisualStyleBackColor = true;
-            this.pvAlcGainEnabled.Click += new System.EventHandler(this.pvAlcGainEnabled_Click);
             // 
             // pvAlcControl
             // 
@@ -464,22 +451,6 @@
             this.lblOverTemperatureAlarm.TabIndex = 56;
             this.lblOverTemperatureAlarm.Text = "温度告警";
             // 
-            // pvOverTemperatureAlarm
-            // 
-            this.pvOverTemperatureAlarm.BackColor = System.Drawing.Color.Transparent;
-            this.pvOverTemperatureAlarm.ButtonColor = System.Drawing.Color.Green;
-            this.pvOverTemperatureAlarm.Label = "";
-            this.pvOverTemperatureAlarm.Location = new System.Drawing.Point(572, 106);
-            this.pvOverTemperatureAlarm.Name = "pvOverTemperatureAlarm";
-            this.pvOverTemperatureAlarm.Renderer = null;
-            this.pvOverTemperatureAlarm.RepeatInterval = 100;
-            this.pvOverTemperatureAlarm.RepeatState = false;
-            this.pvOverTemperatureAlarm.Size = new System.Drawing.Size(20, 20);
-            this.pvOverTemperatureAlarm.StartRepeatInterval = 500;
-            this.pvOverTemperatureAlarm.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.pvOverTemperatureAlarm.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Circular;
-            this.pvOverTemperatureAlarm.TabIndex = 55;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -506,89 +477,6 @@
             this.label13.Size = new System.Drawing.Size(77, 12);
             this.label13.TabIndex = 52;
             this.label13.Text = "功放模块告警";
-            // 
-            // pvAlcVoltage
-            // 
-            this.pvAlcVoltage.DisplayTitle = true;
-            this.pvAlcVoltage.Location = new System.Drawing.Point(15, 387);
-            this.pvAlcVoltage.Maximum = 1000;
-            this.pvAlcVoltage.Minimum = 0;
-            this.pvAlcVoltage.Name = "pvAlcVoltage";
-            this.pvAlcVoltage.Size = new System.Drawing.Size(801, 74);
-            this.pvAlcVoltage.SwitchState = "OFF";
-            this.pvAlcVoltage.TabIndex = 45;
-            this.pvAlcVoltage.Title = "ALC调节";
-            this.pvAlcVoltage.Value = 0;
-            this.pvAlcVoltage.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvAlcVoltage_OnSwitchButton_Click);
-            this.pvAlcVoltage.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvAlcVoltage_OnSaveButton_Click);
-            this.pvAlcVoltage.OnTrackBar_ValueChange += new HMIControls.MyTrackBar.ValueChange(this.pvAlcVoltage_OnTrackBar_ValueChange);
-            this.pvAlcVoltage.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvAlcVoltage_OnTrackBar_MouseUp);
-            this.pvAlcVoltage.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvAlcVoltage_OnNumericUpDown_MouseUp);
-            // 
-            // pvGainVoltage1
-            // 
-            this.pvGainVoltage1.DisplayTitle = true;
-            this.pvGainVoltage1.Location = new System.Drawing.Point(17, 307);
-            this.pvGainVoltage1.Maximum = 1000;
-            this.pvGainVoltage1.Minimum = 0;
-            this.pvGainVoltage1.Name = "pvGainVoltage1";
-            this.pvGainVoltage1.Size = new System.Drawing.Size(801, 74);
-            this.pvGainVoltage1.SwitchState = "OFF";
-            this.pvGainVoltage1.TabIndex = 44;
-            this.pvGainVoltage1.Title = "增益调节";
-            this.pvGainVoltage1.Value = 0;
-            this.pvGainVoltage1.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvGainVoltage1_OnSwitchButton_Click);
-            this.pvGainVoltage1.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvGainVoltage1_OnSaveButton_Click);
-            this.pvGainVoltage1.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvGainVoltage1_OnTrackBar_MouseUp);
-            this.pvGainVoltage1.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvGainVoltage1_OnNumericUpDown_MouseUp);
-            // 
-            // pvVSWRAlarm
-            // 
-            this.pvVSWRAlarm.BackColor = System.Drawing.Color.Transparent;
-            this.pvVSWRAlarm.ButtonColor = System.Drawing.Color.Green;
-            this.pvVSWRAlarm.Label = "";
-            this.pvVSWRAlarm.Location = new System.Drawing.Point(572, 75);
-            this.pvVSWRAlarm.Name = "pvVSWRAlarm";
-            this.pvVSWRAlarm.Renderer = null;
-            this.pvVSWRAlarm.RepeatInterval = 100;
-            this.pvVSWRAlarm.RepeatState = false;
-            this.pvVSWRAlarm.Size = new System.Drawing.Size(20, 20);
-            this.pvVSWRAlarm.StartRepeatInterval = 500;
-            this.pvVSWRAlarm.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.pvVSWRAlarm.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Circular;
-            this.pvVSWRAlarm.TabIndex = 42;
-            // 
-            // pvOverPowerAlarm
-            // 
-            this.pvOverPowerAlarm.BackColor = System.Drawing.Color.Transparent;
-            this.pvOverPowerAlarm.ButtonColor = System.Drawing.Color.Green;
-            this.pvOverPowerAlarm.Label = "";
-            this.pvOverPowerAlarm.Location = new System.Drawing.Point(572, 45);
-            this.pvOverPowerAlarm.Name = "pvOverPowerAlarm";
-            this.pvOverPowerAlarm.Renderer = null;
-            this.pvOverPowerAlarm.RepeatInterval = 100;
-            this.pvOverPowerAlarm.RepeatState = false;
-            this.pvOverPowerAlarm.Size = new System.Drawing.Size(20, 20);
-            this.pvOverPowerAlarm.StartRepeatInterval = 500;
-            this.pvOverPowerAlarm.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.pvOverPowerAlarm.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Circular;
-            this.pvOverPowerAlarm.TabIndex = 40;
-            // 
-            // pvPowerModuleAlarm
-            // 
-            this.pvPowerModuleAlarm.BackColor = System.Drawing.Color.Transparent;
-            this.pvPowerModuleAlarm.ButtonColor = System.Drawing.Color.Green;
-            this.pvPowerModuleAlarm.Label = "";
-            this.pvPowerModuleAlarm.Location = new System.Drawing.Point(572, 19);
-            this.pvPowerModuleAlarm.Name = "pvPowerModuleAlarm";
-            this.pvPowerModuleAlarm.Renderer = null;
-            this.pvPowerModuleAlarm.RepeatInterval = 100;
-            this.pvPowerModuleAlarm.RepeatState = false;
-            this.pvPowerModuleAlarm.Size = new System.Drawing.Size(20, 20);
-            this.pvPowerModuleAlarm.StartRepeatInterval = 500;
-            this.pvPowerModuleAlarm.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.pvPowerModuleAlarm.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Circular;
-            this.pvPowerModuleAlarm.TabIndex = 11;
             // 
             // btnAlcControl
             // 
@@ -803,223 +691,6 @@
             this.tabPage2.Size = new System.Drawing.Size(834, 476);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "栅压调节";
-            // 
-            // pvVgEnabled
-            // 
-            this.pvVgEnabled.ButtonState = true;
-            this.pvVgEnabled.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pvVgEnabled.ImageIndex = 1;
-            this.pvVgEnabled.Location = new System.Drawing.Point(726, 19);
-            this.pvVgEnabled.Name = "pvVgEnabled";
-            this.pvVgEnabled.Size = new System.Drawing.Size(75, 23);
-            this.pvVgEnabled.TabIndex = 73;
-            this.pvVgEnabled.Text = "自动";
-            this.pvVgEnabled.UseVisualStyleBackColor = true;
-            this.pvVgEnabled.Click += new System.EventHandler(this.pvVgEnabled_Click);
-            // 
-            // pvVgVoltage12
-            // 
-            this.pvVgVoltage12.DisplayTitle = true;
-            this.pvVgVoltage12.Location = new System.Drawing.Point(16, 928);
-            this.pvVgVoltage12.Maximum = 1000;
-            this.pvVgVoltage12.Minimum = 0;
-            this.pvVgVoltage12.Name = "pvVgVoltage12";
-            this.pvVgVoltage12.Size = new System.Drawing.Size(795, 74);
-            this.pvVgVoltage12.SwitchState = "OFF";
-            this.pvVgVoltage12.TabIndex = 65;
-            this.pvVgVoltage12.Title = "栅压12";
-            this.pvVgVoltage12.Value = 0;
-            this.pvVgVoltage12.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage12_OnSwitchButton_Click);
-            this.pvVgVoltage12.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage12_OnSaveButton_Click);
-            this.pvVgVoltage12.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage12_OnTrackBar_MouseUp);
-            this.pvVgVoltage12.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage12_OnNumericUpDown_MouseUp);
-            // 
-            // pvVgVoltage11
-            // 
-            this.pvVgVoltage11.DisplayTitle = true;
-            this.pvVgVoltage11.Location = new System.Drawing.Point(16, 848);
-            this.pvVgVoltage11.Maximum = 1000;
-            this.pvVgVoltage11.Minimum = 0;
-            this.pvVgVoltage11.Name = "pvVgVoltage11";
-            this.pvVgVoltage11.Size = new System.Drawing.Size(795, 74);
-            this.pvVgVoltage11.SwitchState = "OFF";
-            this.pvVgVoltage11.TabIndex = 64;
-            this.pvVgVoltage11.Title = "栅压11";
-            this.pvVgVoltage11.Value = 0;
-            this.pvVgVoltage11.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage11_OnSwitchButton_Click);
-            this.pvVgVoltage11.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage11_OnSaveButton_Click);
-            this.pvVgVoltage11.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage11_OnTrackBar_MouseUp);
-            this.pvVgVoltage11.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage11_OnNumericUpDown_MouseUp);
-            // 
-            // pvVgVoltage10
-            // 
-            this.pvVgVoltage10.DisplayTitle = true;
-            this.pvVgVoltage10.Location = new System.Drawing.Point(16, 768);
-            this.pvVgVoltage10.Maximum = 1000;
-            this.pvVgVoltage10.Minimum = 0;
-            this.pvVgVoltage10.Name = "pvVgVoltage10";
-            this.pvVgVoltage10.Size = new System.Drawing.Size(795, 74);
-            this.pvVgVoltage10.SwitchState = "OFF";
-            this.pvVgVoltage10.TabIndex = 63;
-            this.pvVgVoltage10.Title = "栅压10";
-            this.pvVgVoltage10.Value = 0;
-            this.pvVgVoltage10.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage10_OnSwitchButton_Click);
-            this.pvVgVoltage10.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage10_OnSaveButton_Click);
-            this.pvVgVoltage10.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage10_OnTrackBar_MouseUp);
-            this.pvVgVoltage10.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage10_OnNumericUpDown_MouseUp);
-            // 
-            // pvVgVoltage9
-            // 
-            this.pvVgVoltage9.DisplayTitle = true;
-            this.pvVgVoltage9.Location = new System.Drawing.Point(16, 688);
-            this.pvVgVoltage9.Maximum = 1000;
-            this.pvVgVoltage9.Minimum = 0;
-            this.pvVgVoltage9.Name = "pvVgVoltage9";
-            this.pvVgVoltage9.Size = new System.Drawing.Size(795, 74);
-            this.pvVgVoltage9.SwitchState = "OFF";
-            this.pvVgVoltage9.TabIndex = 62;
-            this.pvVgVoltage9.Title = "栅压9";
-            this.pvVgVoltage9.Value = 0;
-            this.pvVgVoltage9.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage9_OnSwitchButton_Click);
-            this.pvVgVoltage9.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage9_OnSaveButton_Click);
-            this.pvVgVoltage9.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage9_OnTrackBar_MouseUp);
-            this.pvVgVoltage9.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage9_OnNumericUpDown_MouseUp);
-            // 
-            // pvVgVoltage8
-            // 
-            this.pvVgVoltage8.DisplayTitle = true;
-            this.pvVgVoltage8.Location = new System.Drawing.Point(16, 608);
-            this.pvVgVoltage8.Maximum = 1000;
-            this.pvVgVoltage8.Minimum = 0;
-            this.pvVgVoltage8.Name = "pvVgVoltage8";
-            this.pvVgVoltage8.Size = new System.Drawing.Size(795, 74);
-            this.pvVgVoltage8.SwitchState = "OFF";
-            this.pvVgVoltage8.TabIndex = 61;
-            this.pvVgVoltage8.Title = "栅压8";
-            this.pvVgVoltage8.Value = 0;
-            this.pvVgVoltage8.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage8_OnSwitchButton_Click);
-            this.pvVgVoltage8.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage8_OnSaveButton_Click);
-            this.pvVgVoltage8.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage8_OnTrackBar_MouseUp);
-            this.pvVgVoltage8.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage8_OnNumericUpDown_MouseUp);
-            // 
-            // pvVgVoltage7
-            // 
-            this.pvVgVoltage7.DisplayTitle = true;
-            this.pvVgVoltage7.Location = new System.Drawing.Point(16, 528);
-            this.pvVgVoltage7.Maximum = 1000;
-            this.pvVgVoltage7.Minimum = 0;
-            this.pvVgVoltage7.Name = "pvVgVoltage7";
-            this.pvVgVoltage7.Size = new System.Drawing.Size(795, 74);
-            this.pvVgVoltage7.SwitchState = "OFF";
-            this.pvVgVoltage7.TabIndex = 60;
-            this.pvVgVoltage7.Title = "栅压7";
-            this.pvVgVoltage7.Value = 0;
-            this.pvVgVoltage7.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage7_OnSwitchButton_Click);
-            this.pvVgVoltage7.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage7_OnSaveButton_Click);
-            this.pvVgVoltage7.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage7_OnTrackBar_MouseUp);
-            this.pvVgVoltage7.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage7_OnNumericUpDown_MouseUp);
-            // 
-            // pvVgVoltage6
-            // 
-            this.pvVgVoltage6.DisplayTitle = true;
-            this.pvVgVoltage6.Location = new System.Drawing.Point(16, 448);
-            this.pvVgVoltage6.Maximum = 1000;
-            this.pvVgVoltage6.Minimum = 0;
-            this.pvVgVoltage6.Name = "pvVgVoltage6";
-            this.pvVgVoltage6.Size = new System.Drawing.Size(795, 74);
-            this.pvVgVoltage6.SwitchState = "OFF";
-            this.pvVgVoltage6.TabIndex = 59;
-            this.pvVgVoltage6.Title = "栅压6";
-            this.pvVgVoltage6.Value = 0;
-            this.pvVgVoltage6.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage6_OnSwitchButton_Click);
-            this.pvVgVoltage6.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage6_OnSaveButton_Click);
-            this.pvVgVoltage6.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage6_OnTrackBar_MouseUp);
-            this.pvVgVoltage6.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage6_OnNumericUpDown_MouseUp);
-            // 
-            // pvVgVoltage5
-            // 
-            this.pvVgVoltage5.DisplayTitle = true;
-            this.pvVgVoltage5.Location = new System.Drawing.Point(16, 368);
-            this.pvVgVoltage5.Maximum = 1000;
-            this.pvVgVoltage5.Minimum = 0;
-            this.pvVgVoltage5.Name = "pvVgVoltage5";
-            this.pvVgVoltage5.Size = new System.Drawing.Size(795, 74);
-            this.pvVgVoltage5.SwitchState = "OFF";
-            this.pvVgVoltage5.TabIndex = 58;
-            this.pvVgVoltage5.Title = "栅压5";
-            this.pvVgVoltage5.Value = 0;
-            this.pvVgVoltage5.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage5_OnSwitchButton_Click);
-            this.pvVgVoltage5.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage5_OnSaveButton_Click);
-            this.pvVgVoltage5.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage5_OnTrackBar_MouseUp);
-            this.pvVgVoltage5.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage5_OnNumericUpDown_MouseUp);
-            // 
-            // pvVgVoltage4
-            // 
-            this.pvVgVoltage4.DisplayTitle = true;
-            this.pvVgVoltage4.Location = new System.Drawing.Point(16, 288);
-            this.pvVgVoltage4.Maximum = 1000;
-            this.pvVgVoltage4.Minimum = 0;
-            this.pvVgVoltage4.Name = "pvVgVoltage4";
-            this.pvVgVoltage4.Size = new System.Drawing.Size(795, 74);
-            this.pvVgVoltage4.SwitchState = "OFF";
-            this.pvVgVoltage4.TabIndex = 57;
-            this.pvVgVoltage4.Title = "栅压4";
-            this.pvVgVoltage4.Value = 0;
-            this.pvVgVoltage4.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage4_OnSwitchButton_Click);
-            this.pvVgVoltage4.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage4_OnSaveButton_Click);
-            this.pvVgVoltage4.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage4_OnTrackBar_MouseUp);
-            this.pvVgVoltage4.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage4_OnNumericUpDown_MouseUp);
-            // 
-            // pvVgVoltage3
-            // 
-            this.pvVgVoltage3.DisplayTitle = true;
-            this.pvVgVoltage3.Location = new System.Drawing.Point(16, 208);
-            this.pvVgVoltage3.Maximum = 1000;
-            this.pvVgVoltage3.Minimum = 0;
-            this.pvVgVoltage3.Name = "pvVgVoltage3";
-            this.pvVgVoltage3.Size = new System.Drawing.Size(795, 74);
-            this.pvVgVoltage3.SwitchState = "OFF";
-            this.pvVgVoltage3.TabIndex = 56;
-            this.pvVgVoltage3.Title = "栅压3";
-            this.pvVgVoltage3.Value = 0;
-            this.pvVgVoltage3.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage3_OnSwitchButton_Click);
-            this.pvVgVoltage3.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage3_OnSaveButton_Click);
-            this.pvVgVoltage3.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage3_OnTrackBar_MouseUp);
-            this.pvVgVoltage3.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage3_OnNumericUpDown_MouseUp);
-            // 
-            // pvVgVoltage2
-            // 
-            this.pvVgVoltage2.DisplayTitle = true;
-            this.pvVgVoltage2.Location = new System.Drawing.Point(16, 128);
-            this.pvVgVoltage2.Maximum = 1000;
-            this.pvVgVoltage2.Minimum = 0;
-            this.pvVgVoltage2.Name = "pvVgVoltage2";
-            this.pvVgVoltage2.Size = new System.Drawing.Size(795, 74);
-            this.pvVgVoltage2.SwitchState = "OFF";
-            this.pvVgVoltage2.TabIndex = 55;
-            this.pvVgVoltage2.Title = "栅压2";
-            this.pvVgVoltage2.Value = 0;
-            this.pvVgVoltage2.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage2_OnSwitchButton_Click);
-            this.pvVgVoltage2.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage2_OnSaveButton_Click);
-            this.pvVgVoltage2.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage2_OnTrackBar_MouseUp);
-            this.pvVgVoltage2.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage2_OnNumericUpDown_MouseUp);
-            // 
-            // pvVgVoltage1
-            // 
-            this.pvVgVoltage1.DisplayTitle = true;
-            this.pvVgVoltage1.Location = new System.Drawing.Point(16, 48);
-            this.pvVgVoltage1.Maximum = 1000;
-            this.pvVgVoltage1.Minimum = 0;
-            this.pvVgVoltage1.Name = "pvVgVoltage1";
-            this.pvVgVoltage1.Size = new System.Drawing.Size(795, 74);
-            this.pvVgVoltage1.SwitchState = "OFF";
-            this.pvVgVoltage1.TabIndex = 53;
-            this.pvVgVoltage1.Title = "栅压1";
-            this.pvVgVoltage1.Value = 0;
-            this.pvVgVoltage1.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage1_OnSwitchButton_Click);
-            this.pvVgVoltage1.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage1_OnSaveButton_Click);
-            this.pvVgVoltage1.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage1_OnTrackBar_MouseUp);
-            this.pvVgVoltage1.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage1_OnNumericUpDown_MouseUp);
             // 
             // tabPage3
             // 
@@ -1262,68 +933,6 @@
             this.label96.TabIndex = 4;
             this.label96.Text = "输入功率标定";
             // 
-            // pvAlcVoltage1
-            // 
-            this.pvAlcVoltage1.DisplayTitle = true;
-            this.pvAlcVoltage1.Location = new System.Drawing.Point(16, 394);
-            this.pvAlcVoltage1.Maximum = 1000;
-            this.pvAlcVoltage1.Minimum = 0;
-            this.pvAlcVoltage1.Name = "pvAlcVoltage1";
-            this.pvAlcVoltage1.Size = new System.Drawing.Size(801, 74);
-            this.pvAlcVoltage1.SwitchState = "OFF";
-            this.pvAlcVoltage1.TabIndex = 47;
-            this.pvAlcVoltage1.Title = "ALC调节";
-            this.pvAlcVoltage1.Value = 0;
-            this.pvAlcVoltage1.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvAlcVoltage_OnSwitchButton_Click);
-            this.pvAlcVoltage1.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvAlcVoltage_OnSaveButton_Click);
-            this.pvAlcVoltage1.OnTrackBar_ValueChange += new HMIControls.MyTrackBar.ValueChange(this.pvAlcVoltage1_OnTrackBar_ValueChange);
-            this.pvAlcVoltage1.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvAlcVoltage_OnTrackBar_MouseUp);
-            this.pvAlcVoltage1.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvAlcVoltage_OnNumericUpDown_MouseUp);
-            // 
-            // pvAlcPowerVoltage
-            // 
-            this.pvAlcPowerVoltage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pvAlcPowerVoltage.Location = new System.Drawing.Point(626, 69);
-            this.pvAlcPowerVoltage.Name = "pvAlcPowerVoltage";
-            this.pvAlcPowerVoltage.RowTemplate.Height = 23;
-            this.pvAlcPowerVoltage.Size = new System.Drawing.Size(203, 253);
-            this.pvAlcPowerVoltage.TabIndex = 20;
-            this.pvAlcPowerVoltage.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pvAlcPowerVoltage_DataError);
-            this.pvAlcPowerVoltage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pvAlcPowerVoltage_KeyPress);
-            // 
-            // pvIncidentPowerAd
-            // 
-            this.pvIncidentPowerAd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pvIncidentPowerAd.Location = new System.Drawing.Point(419, 69);
-            this.pvIncidentPowerAd.Name = "pvIncidentPowerAd";
-            this.pvIncidentPowerAd.RowTemplate.Height = 23;
-            this.pvIncidentPowerAd.Size = new System.Drawing.Size(203, 253);
-            this.pvIncidentPowerAd.TabIndex = 19;
-            this.pvIncidentPowerAd.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pvIncidentPowerAd_DataError);
-            this.pvIncidentPowerAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pvIncidentPowerAd_KeyPress);
-            // 
-            // pvOutputPowerAd
-            // 
-            this.pvOutputPowerAd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pvOutputPowerAd.Location = new System.Drawing.Point(213, 69);
-            this.pvOutputPowerAd.Name = "pvOutputPowerAd";
-            this.pvOutputPowerAd.RowTemplate.Height = 23;
-            this.pvOutputPowerAd.Size = new System.Drawing.Size(203, 253);
-            this.pvOutputPowerAd.TabIndex = 18;
-            this.pvOutputPowerAd.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pvOutputPowerAd_DataError);
-            this.pvOutputPowerAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pvOutputPowerAd_KeyPress);
-            // 
-            // pvInputPowerAd
-            // 
-            this.pvInputPowerAd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pvInputPowerAd.Location = new System.Drawing.Point(6, 69);
-            this.pvInputPowerAd.Name = "pvInputPowerAd";
-            this.pvInputPowerAd.RowTemplate.Height = 23;
-            this.pvInputPowerAd.Size = new System.Drawing.Size(203, 253);
-            this.pvInputPowerAd.TabIndex = 17;
-            this.pvInputPowerAd.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pvInputPowerAd_DataError);
-            this.pvInputPowerAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pvInputPowerAd_KeyPress);
-            // 
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.LightGray;
@@ -1377,16 +986,6 @@
             this.btnAttCompensation.Text = "查询";
             this.btnAttCompensation.UseVisualStyleBackColor = true;
             this.btnAttCompensation.Click += new System.EventHandler(this.pvAttCompensation_Click);
-            // 
-            // pvAttCompensation
-            // 
-            this.pvAttCompensation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pvAttCompensation.Location = new System.Drawing.Point(19, 75);
-            this.pvAttCompensation.Name = "pvAttCompensation";
-            this.pvAttCompensation.RowTemplate.Height = 23;
-            this.pvAttCompensation.Size = new System.Drawing.Size(283, 91);
-            this.pvAttCompensation.TabIndex = 21;
-            this.pvAttCompensation.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pvAttCompensation_DataError);
             // 
             // tabPage5
             // 
@@ -1784,6 +1383,7 @@
             this.btnReset1894.TabIndex = 0;
             this.btnReset1894.Text = "1894复位";
             this.btnReset1894.UseVisualStyleBackColor = true;
+            this.btnReset1894.Click += new System.EventHandler(this.btnReset1894_Click);
             // 
             // tabPage6
             // 
@@ -1927,28 +1527,28 @@
             // menuUnitParam
             // 
             this.menuUnitParam.Name = "menuUnitParam";
-            this.menuUnitParam.Size = new System.Drawing.Size(152, 22);
+            this.menuUnitParam.Size = new System.Drawing.Size(128, 22);
             this.menuUnitParam.Text = "设备参数";
             this.menuUnitParam.Click += new System.EventHandler(this.menuUnitParam_Click);
             // 
             // menuVg
             // 
             this.menuVg.Name = "menuVg";
-            this.menuVg.Size = new System.Drawing.Size(152, 22);
+            this.menuVg.Size = new System.Drawing.Size(128, 22);
             this.menuVg.Text = "栅压调节";
             this.menuVg.Click += new System.EventHandler(this.menuVg_Click);
             // 
             // menuPowerSet
             // 
             this.menuPowerSet.Name = "menuPowerSet";
-            this.menuPowerSet.Size = new System.Drawing.Size(152, 22);
+            this.menuPowerSet.Size = new System.Drawing.Size(128, 22);
             this.menuPowerSet.Text = "功率标定";
             this.menuPowerSet.Click += new System.EventHandler(this.menuPowerSet_Click);
             // 
             // menuAttCompensation
             // 
             this.menuAttCompensation.Name = "menuAttCompensation";
-            this.menuAttCompensation.Size = new System.Drawing.Size(152, 22);
+            this.menuAttCompensation.Size = new System.Drawing.Size(128, 22);
             this.menuAttCompensation.Text = "衰减补偿";
             this.menuAttCompensation.Click += new System.EventHandler(this.menuAttCompensation_Click);
             // 
@@ -1964,14 +1564,14 @@
             // menuLog
             // 
             this.menuLog.Name = "menuLog";
-            this.menuLog.Size = new System.Drawing.Size(152, 22);
+            this.menuLog.Size = new System.Drawing.Size(100, 22);
             this.menuLog.Text = "日志";
             this.menuLog.Click += new System.EventHandler(this.menuLog_Click);
             // 
             // menuAbout
             // 
             this.menuAbout.Name = "menuAbout";
-            this.menuAbout.Size = new System.Drawing.Size(152, 22);
+            this.menuAbout.Size = new System.Drawing.Size(100, 22);
             this.menuAbout.Text = "关于";
             this.menuAbout.Click += new System.EventHandler(this.menuAbout_Click);
             // 
@@ -1991,6 +1591,13 @@
             this.lbSystemTemperature.Size = new System.Drawing.Size(38, 19);
             this.lbSystemTemperature.TabIndex = 74;
             this.lbSystemTemperature.Text = "0℃";
+            // 
+            // menu1894
+            // 
+            this.menu1894.Name = "menu1894";
+            this.menu1894.Size = new System.Drawing.Size(128, 22);
+            this.menu1894.Text = "1894功能";
+            this.menu1894.Click += new System.EventHandler(this.menu1894_Click);
             // 
             // lbLedUnitState
             // 
@@ -2046,12 +1653,406 @@
             this.pvSystemThermometer.Temperature = 0F;
             this.pvSystemThermometer.TempFont = new System.Drawing.Font("宋体", 12F);
             // 
-            // menu1894
+            // pvAlcGainEnabled
             // 
-            this.menu1894.Name = "menu1894";
-            this.menu1894.Size = new System.Drawing.Size(152, 22);
-            this.menu1894.Text = "1894功能";
-            this.menu1894.Click += new System.EventHandler(this.menu1894_Click);
+            this.pvAlcGainEnabled.ButtonState = true;
+            this.pvAlcGainEnabled.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pvAlcGainEnabled.ImageIndex = 1;
+            this.pvAlcGainEnabled.Location = new System.Drawing.Point(734, 288);
+            this.pvAlcGainEnabled.Name = "pvAlcGainEnabled";
+            this.pvAlcGainEnabled.Size = new System.Drawing.Size(75, 23);
+            this.pvAlcGainEnabled.TabIndex = 72;
+            this.pvAlcGainEnabled.Text = "自动";
+            this.pvAlcGainEnabled.UseVisualStyleBackColor = true;
+            this.pvAlcGainEnabled.Click += new System.EventHandler(this.pvAlcGainEnabled_Click);
+            // 
+            // pvOverTemperatureAlarm
+            // 
+            this.pvOverTemperatureAlarm.BackColor = System.Drawing.Color.Transparent;
+            this.pvOverTemperatureAlarm.ButtonColor = System.Drawing.Color.Green;
+            this.pvOverTemperatureAlarm.Label = "";
+            this.pvOverTemperatureAlarm.Location = new System.Drawing.Point(572, 106);
+            this.pvOverTemperatureAlarm.Name = "pvOverTemperatureAlarm";
+            this.pvOverTemperatureAlarm.Renderer = null;
+            this.pvOverTemperatureAlarm.RepeatInterval = 100;
+            this.pvOverTemperatureAlarm.RepeatState = false;
+            this.pvOverTemperatureAlarm.Size = new System.Drawing.Size(20, 20);
+            this.pvOverTemperatureAlarm.StartRepeatInterval = 500;
+            this.pvOverTemperatureAlarm.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.pvOverTemperatureAlarm.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Circular;
+            this.pvOverTemperatureAlarm.TabIndex = 55;
+            // 
+            // pvAlcVoltage
+            // 
+            this.pvAlcVoltage.DisplayTitle = true;
+            this.pvAlcVoltage.Location = new System.Drawing.Point(15, 387);
+            this.pvAlcVoltage.Maximum = 1000;
+            this.pvAlcVoltage.Minimum = 0;
+            this.pvAlcVoltage.Name = "pvAlcVoltage";
+            this.pvAlcVoltage.Size = new System.Drawing.Size(801, 74);
+            this.pvAlcVoltage.SwitchState = "OFF";
+            this.pvAlcVoltage.TabIndex = 45;
+            this.pvAlcVoltage.Title = "ALC调节";
+            this.pvAlcVoltage.Value = 0;
+            this.pvAlcVoltage.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvAlcVoltage_OnSwitchButton_Click);
+            this.pvAlcVoltage.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvAlcVoltage_OnSaveButton_Click);
+            this.pvAlcVoltage.OnTrackBar_ValueChange += new HMIControls.MyTrackBar.ValueChange(this.pvAlcVoltage_OnTrackBar_ValueChange);
+            this.pvAlcVoltage.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvAlcVoltage_OnTrackBar_MouseUp);
+            this.pvAlcVoltage.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvAlcVoltage_OnNumericUpDown_MouseUp);
+            // 
+            // pvGainVoltage1
+            // 
+            this.pvGainVoltage1.DisplayTitle = true;
+            this.pvGainVoltage1.Location = new System.Drawing.Point(17, 307);
+            this.pvGainVoltage1.Maximum = 1000;
+            this.pvGainVoltage1.Minimum = 0;
+            this.pvGainVoltage1.Name = "pvGainVoltage1";
+            this.pvGainVoltage1.Size = new System.Drawing.Size(801, 74);
+            this.pvGainVoltage1.SwitchState = "OFF";
+            this.pvGainVoltage1.TabIndex = 44;
+            this.pvGainVoltage1.Title = "增益调节";
+            this.pvGainVoltage1.Value = 0;
+            this.pvGainVoltage1.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvGainVoltage1_OnSwitchButton_Click);
+            this.pvGainVoltage1.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvGainVoltage1_OnSaveButton_Click);
+            this.pvGainVoltage1.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvGainVoltage1_OnTrackBar_MouseUp);
+            this.pvGainVoltage1.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvGainVoltage1_OnNumericUpDown_MouseUp);
+            // 
+            // pvVSWRAlarm
+            // 
+            this.pvVSWRAlarm.BackColor = System.Drawing.Color.Transparent;
+            this.pvVSWRAlarm.ButtonColor = System.Drawing.Color.Green;
+            this.pvVSWRAlarm.Label = "";
+            this.pvVSWRAlarm.Location = new System.Drawing.Point(572, 75);
+            this.pvVSWRAlarm.Name = "pvVSWRAlarm";
+            this.pvVSWRAlarm.Renderer = null;
+            this.pvVSWRAlarm.RepeatInterval = 100;
+            this.pvVSWRAlarm.RepeatState = false;
+            this.pvVSWRAlarm.Size = new System.Drawing.Size(20, 20);
+            this.pvVSWRAlarm.StartRepeatInterval = 500;
+            this.pvVSWRAlarm.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.pvVSWRAlarm.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Circular;
+            this.pvVSWRAlarm.TabIndex = 42;
+            // 
+            // pvOverPowerAlarm
+            // 
+            this.pvOverPowerAlarm.BackColor = System.Drawing.Color.Transparent;
+            this.pvOverPowerAlarm.ButtonColor = System.Drawing.Color.Green;
+            this.pvOverPowerAlarm.Label = "";
+            this.pvOverPowerAlarm.Location = new System.Drawing.Point(572, 45);
+            this.pvOverPowerAlarm.Name = "pvOverPowerAlarm";
+            this.pvOverPowerAlarm.Renderer = null;
+            this.pvOverPowerAlarm.RepeatInterval = 100;
+            this.pvOverPowerAlarm.RepeatState = false;
+            this.pvOverPowerAlarm.Size = new System.Drawing.Size(20, 20);
+            this.pvOverPowerAlarm.StartRepeatInterval = 500;
+            this.pvOverPowerAlarm.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.pvOverPowerAlarm.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Circular;
+            this.pvOverPowerAlarm.TabIndex = 40;
+            // 
+            // pvPowerModuleAlarm
+            // 
+            this.pvPowerModuleAlarm.BackColor = System.Drawing.Color.Transparent;
+            this.pvPowerModuleAlarm.ButtonColor = System.Drawing.Color.Green;
+            this.pvPowerModuleAlarm.Label = "";
+            this.pvPowerModuleAlarm.Location = new System.Drawing.Point(572, 19);
+            this.pvPowerModuleAlarm.Name = "pvPowerModuleAlarm";
+            this.pvPowerModuleAlarm.Renderer = null;
+            this.pvPowerModuleAlarm.RepeatInterval = 100;
+            this.pvPowerModuleAlarm.RepeatState = false;
+            this.pvPowerModuleAlarm.Size = new System.Drawing.Size(20, 20);
+            this.pvPowerModuleAlarm.StartRepeatInterval = 500;
+            this.pvPowerModuleAlarm.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.pvPowerModuleAlarm.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Circular;
+            this.pvPowerModuleAlarm.TabIndex = 11;
+            // 
+            // pvVgEnabled
+            // 
+            this.pvVgEnabled.ButtonState = true;
+            this.pvVgEnabled.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pvVgEnabled.ImageIndex = 1;
+            this.pvVgEnabled.Location = new System.Drawing.Point(726, 19);
+            this.pvVgEnabled.Name = "pvVgEnabled";
+            this.pvVgEnabled.Size = new System.Drawing.Size(75, 23);
+            this.pvVgEnabled.TabIndex = 73;
+            this.pvVgEnabled.Text = "自动";
+            this.pvVgEnabled.UseVisualStyleBackColor = true;
+            this.pvVgEnabled.Click += new System.EventHandler(this.pvVgEnabled_Click);
+            // 
+            // pvVgVoltage12
+            // 
+            this.pvVgVoltage12.DisplayTitle = true;
+            this.pvVgVoltage12.Location = new System.Drawing.Point(16, 928);
+            this.pvVgVoltage12.Maximum = 1000;
+            this.pvVgVoltage12.Minimum = 0;
+            this.pvVgVoltage12.Name = "pvVgVoltage12";
+            this.pvVgVoltage12.Size = new System.Drawing.Size(795, 74);
+            this.pvVgVoltage12.SwitchState = "OFF";
+            this.pvVgVoltage12.TabIndex = 65;
+            this.pvVgVoltage12.Title = "栅压12";
+            this.pvVgVoltage12.Value = 0;
+            this.pvVgVoltage12.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage12_OnSwitchButton_Click);
+            this.pvVgVoltage12.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage12_OnSaveButton_Click);
+            this.pvVgVoltage12.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage12_OnTrackBar_MouseUp);
+            this.pvVgVoltage12.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage12_OnNumericUpDown_MouseUp);
+            // 
+            // pvVgVoltage11
+            // 
+            this.pvVgVoltage11.DisplayTitle = true;
+            this.pvVgVoltage11.Location = new System.Drawing.Point(16, 848);
+            this.pvVgVoltage11.Maximum = 1000;
+            this.pvVgVoltage11.Minimum = 0;
+            this.pvVgVoltage11.Name = "pvVgVoltage11";
+            this.pvVgVoltage11.Size = new System.Drawing.Size(795, 74);
+            this.pvVgVoltage11.SwitchState = "OFF";
+            this.pvVgVoltage11.TabIndex = 64;
+            this.pvVgVoltage11.Title = "栅压11";
+            this.pvVgVoltage11.Value = 0;
+            this.pvVgVoltage11.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage11_OnSwitchButton_Click);
+            this.pvVgVoltage11.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage11_OnSaveButton_Click);
+            this.pvVgVoltage11.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage11_OnTrackBar_MouseUp);
+            this.pvVgVoltage11.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage11_OnNumericUpDown_MouseUp);
+            // 
+            // pvVgVoltage10
+            // 
+            this.pvVgVoltage10.DisplayTitle = true;
+            this.pvVgVoltage10.Location = new System.Drawing.Point(16, 768);
+            this.pvVgVoltage10.Maximum = 1000;
+            this.pvVgVoltage10.Minimum = 0;
+            this.pvVgVoltage10.Name = "pvVgVoltage10";
+            this.pvVgVoltage10.Size = new System.Drawing.Size(795, 74);
+            this.pvVgVoltage10.SwitchState = "OFF";
+            this.pvVgVoltage10.TabIndex = 63;
+            this.pvVgVoltage10.Title = "栅压10";
+            this.pvVgVoltage10.Value = 0;
+            this.pvVgVoltage10.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage10_OnSwitchButton_Click);
+            this.pvVgVoltage10.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage10_OnSaveButton_Click);
+            this.pvVgVoltage10.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage10_OnTrackBar_MouseUp);
+            this.pvVgVoltage10.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage10_OnNumericUpDown_MouseUp);
+            // 
+            // pvVgVoltage9
+            // 
+            this.pvVgVoltage9.DisplayTitle = true;
+            this.pvVgVoltage9.Location = new System.Drawing.Point(16, 688);
+            this.pvVgVoltage9.Maximum = 1000;
+            this.pvVgVoltage9.Minimum = 0;
+            this.pvVgVoltage9.Name = "pvVgVoltage9";
+            this.pvVgVoltage9.Size = new System.Drawing.Size(795, 74);
+            this.pvVgVoltage9.SwitchState = "OFF";
+            this.pvVgVoltage9.TabIndex = 62;
+            this.pvVgVoltage9.Title = "栅压9";
+            this.pvVgVoltage9.Value = 0;
+            this.pvVgVoltage9.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage9_OnSwitchButton_Click);
+            this.pvVgVoltage9.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage9_OnSaveButton_Click);
+            this.pvVgVoltage9.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage9_OnTrackBar_MouseUp);
+            this.pvVgVoltage9.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage9_OnNumericUpDown_MouseUp);
+            // 
+            // pvVgVoltage8
+            // 
+            this.pvVgVoltage8.DisplayTitle = true;
+            this.pvVgVoltage8.Location = new System.Drawing.Point(16, 608);
+            this.pvVgVoltage8.Maximum = 1000;
+            this.pvVgVoltage8.Minimum = 0;
+            this.pvVgVoltage8.Name = "pvVgVoltage8";
+            this.pvVgVoltage8.Size = new System.Drawing.Size(795, 74);
+            this.pvVgVoltage8.SwitchState = "OFF";
+            this.pvVgVoltage8.TabIndex = 61;
+            this.pvVgVoltage8.Title = "栅压8";
+            this.pvVgVoltage8.Value = 0;
+            this.pvVgVoltage8.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage8_OnSwitchButton_Click);
+            this.pvVgVoltage8.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage8_OnSaveButton_Click);
+            this.pvVgVoltage8.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage8_OnTrackBar_MouseUp);
+            this.pvVgVoltage8.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage8_OnNumericUpDown_MouseUp);
+            // 
+            // pvVgVoltage7
+            // 
+            this.pvVgVoltage7.DisplayTitle = true;
+            this.pvVgVoltage7.Location = new System.Drawing.Point(16, 528);
+            this.pvVgVoltage7.Maximum = 1000;
+            this.pvVgVoltage7.Minimum = 0;
+            this.pvVgVoltage7.Name = "pvVgVoltage7";
+            this.pvVgVoltage7.Size = new System.Drawing.Size(795, 74);
+            this.pvVgVoltage7.SwitchState = "OFF";
+            this.pvVgVoltage7.TabIndex = 60;
+            this.pvVgVoltage7.Title = "栅压7";
+            this.pvVgVoltage7.Value = 0;
+            this.pvVgVoltage7.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage7_OnSwitchButton_Click);
+            this.pvVgVoltage7.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage7_OnSaveButton_Click);
+            this.pvVgVoltage7.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage7_OnTrackBar_MouseUp);
+            this.pvVgVoltage7.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage7_OnNumericUpDown_MouseUp);
+            // 
+            // pvVgVoltage6
+            // 
+            this.pvVgVoltage6.DisplayTitle = true;
+            this.pvVgVoltage6.Location = new System.Drawing.Point(16, 448);
+            this.pvVgVoltage6.Maximum = 1000;
+            this.pvVgVoltage6.Minimum = 0;
+            this.pvVgVoltage6.Name = "pvVgVoltage6";
+            this.pvVgVoltage6.Size = new System.Drawing.Size(795, 74);
+            this.pvVgVoltage6.SwitchState = "OFF";
+            this.pvVgVoltage6.TabIndex = 59;
+            this.pvVgVoltage6.Title = "栅压6";
+            this.pvVgVoltage6.Value = 0;
+            this.pvVgVoltage6.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage6_OnSwitchButton_Click);
+            this.pvVgVoltage6.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage6_OnSaveButton_Click);
+            this.pvVgVoltage6.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage6_OnTrackBar_MouseUp);
+            this.pvVgVoltage6.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage6_OnNumericUpDown_MouseUp);
+            // 
+            // pvVgVoltage5
+            // 
+            this.pvVgVoltage5.DisplayTitle = true;
+            this.pvVgVoltage5.Location = new System.Drawing.Point(16, 368);
+            this.pvVgVoltage5.Maximum = 1000;
+            this.pvVgVoltage5.Minimum = 0;
+            this.pvVgVoltage5.Name = "pvVgVoltage5";
+            this.pvVgVoltage5.Size = new System.Drawing.Size(795, 74);
+            this.pvVgVoltage5.SwitchState = "OFF";
+            this.pvVgVoltage5.TabIndex = 58;
+            this.pvVgVoltage5.Title = "栅压5";
+            this.pvVgVoltage5.Value = 0;
+            this.pvVgVoltage5.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage5_OnSwitchButton_Click);
+            this.pvVgVoltage5.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage5_OnSaveButton_Click);
+            this.pvVgVoltage5.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage5_OnTrackBar_MouseUp);
+            this.pvVgVoltage5.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage5_OnNumericUpDown_MouseUp);
+            // 
+            // pvVgVoltage4
+            // 
+            this.pvVgVoltage4.DisplayTitle = true;
+            this.pvVgVoltage4.Location = new System.Drawing.Point(16, 288);
+            this.pvVgVoltage4.Maximum = 1000;
+            this.pvVgVoltage4.Minimum = 0;
+            this.pvVgVoltage4.Name = "pvVgVoltage4";
+            this.pvVgVoltage4.Size = new System.Drawing.Size(795, 74);
+            this.pvVgVoltage4.SwitchState = "OFF";
+            this.pvVgVoltage4.TabIndex = 57;
+            this.pvVgVoltage4.Title = "栅压4";
+            this.pvVgVoltage4.Value = 0;
+            this.pvVgVoltage4.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage4_OnSwitchButton_Click);
+            this.pvVgVoltage4.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage4_OnSaveButton_Click);
+            this.pvVgVoltage4.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage4_OnTrackBar_MouseUp);
+            this.pvVgVoltage4.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage4_OnNumericUpDown_MouseUp);
+            // 
+            // pvVgVoltage3
+            // 
+            this.pvVgVoltage3.DisplayTitle = true;
+            this.pvVgVoltage3.Location = new System.Drawing.Point(16, 208);
+            this.pvVgVoltage3.Maximum = 1000;
+            this.pvVgVoltage3.Minimum = 0;
+            this.pvVgVoltage3.Name = "pvVgVoltage3";
+            this.pvVgVoltage3.Size = new System.Drawing.Size(795, 74);
+            this.pvVgVoltage3.SwitchState = "OFF";
+            this.pvVgVoltage3.TabIndex = 56;
+            this.pvVgVoltage3.Title = "栅压3";
+            this.pvVgVoltage3.Value = 0;
+            this.pvVgVoltage3.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage3_OnSwitchButton_Click);
+            this.pvVgVoltage3.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage3_OnSaveButton_Click);
+            this.pvVgVoltage3.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage3_OnTrackBar_MouseUp);
+            this.pvVgVoltage3.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage3_OnNumericUpDown_MouseUp);
+            // 
+            // pvVgVoltage2
+            // 
+            this.pvVgVoltage2.DisplayTitle = true;
+            this.pvVgVoltage2.Location = new System.Drawing.Point(16, 128);
+            this.pvVgVoltage2.Maximum = 1000;
+            this.pvVgVoltage2.Minimum = 0;
+            this.pvVgVoltage2.Name = "pvVgVoltage2";
+            this.pvVgVoltage2.Size = new System.Drawing.Size(795, 74);
+            this.pvVgVoltage2.SwitchState = "OFF";
+            this.pvVgVoltage2.TabIndex = 55;
+            this.pvVgVoltage2.Title = "栅压2";
+            this.pvVgVoltage2.Value = 0;
+            this.pvVgVoltage2.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage2_OnSwitchButton_Click);
+            this.pvVgVoltage2.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage2_OnSaveButton_Click);
+            this.pvVgVoltage2.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage2_OnTrackBar_MouseUp);
+            this.pvVgVoltage2.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage2_OnNumericUpDown_MouseUp);
+            // 
+            // pvVgVoltage1
+            // 
+            this.pvVgVoltage1.DisplayTitle = true;
+            this.pvVgVoltage1.Location = new System.Drawing.Point(16, 48);
+            this.pvVgVoltage1.Maximum = 1000;
+            this.pvVgVoltage1.Minimum = 0;
+            this.pvVgVoltage1.Name = "pvVgVoltage1";
+            this.pvVgVoltage1.Size = new System.Drawing.Size(795, 74);
+            this.pvVgVoltage1.SwitchState = "OFF";
+            this.pvVgVoltage1.TabIndex = 53;
+            this.pvVgVoltage1.Title = "栅压1";
+            this.pvVgVoltage1.Value = 0;
+            this.pvVgVoltage1.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage1_OnSwitchButton_Click);
+            this.pvVgVoltage1.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvVgVoltage1_OnSaveButton_Click);
+            this.pvVgVoltage1.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage1_OnTrackBar_MouseUp);
+            this.pvVgVoltage1.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvVgVoltage1_OnNumericUpDown_MouseUp);
+            // 
+            // pvAlcVoltage1
+            // 
+            this.pvAlcVoltage1.DisplayTitle = true;
+            this.pvAlcVoltage1.Location = new System.Drawing.Point(16, 394);
+            this.pvAlcVoltage1.Maximum = 1000;
+            this.pvAlcVoltage1.Minimum = 0;
+            this.pvAlcVoltage1.Name = "pvAlcVoltage1";
+            this.pvAlcVoltage1.Size = new System.Drawing.Size(801, 74);
+            this.pvAlcVoltage1.SwitchState = "OFF";
+            this.pvAlcVoltage1.TabIndex = 47;
+            this.pvAlcVoltage1.Title = "ALC调节";
+            this.pvAlcVoltage1.Value = 0;
+            this.pvAlcVoltage1.OnSwitchButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvAlcVoltage_OnSwitchButton_Click);
+            this.pvAlcVoltage1.OnSaveButton_Click += new HMIControls.MyTrackBar.ButtonClick(this.pvAlcVoltage_OnSaveButton_Click);
+            this.pvAlcVoltage1.OnTrackBar_ValueChange += new HMIControls.MyTrackBar.ValueChange(this.pvAlcVoltage1_OnTrackBar_ValueChange);
+            this.pvAlcVoltage1.OnTrackBar_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvAlcVoltage_OnTrackBar_MouseUp);
+            this.pvAlcVoltage1.OnNumericUpDown_MouseUp += new HMIControls.MyTrackBar.MouseUp(this.pvAlcVoltage_OnNumericUpDown_MouseUp);
+            // 
+            // pvAlcPowerVoltage
+            // 
+            this.pvAlcPowerVoltage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pvAlcPowerVoltage.Location = new System.Drawing.Point(626, 69);
+            this.pvAlcPowerVoltage.Name = "pvAlcPowerVoltage";
+            this.pvAlcPowerVoltage.RowTemplate.Height = 23;
+            this.pvAlcPowerVoltage.Size = new System.Drawing.Size(203, 253);
+            this.pvAlcPowerVoltage.TabIndex = 20;
+            this.pvAlcPowerVoltage.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pvAlcPowerVoltage_DataError);
+            this.pvAlcPowerVoltage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pvAlcPowerVoltage_KeyPress);
+            // 
+            // pvIncidentPowerAd
+            // 
+            this.pvIncidentPowerAd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pvIncidentPowerAd.Location = new System.Drawing.Point(419, 69);
+            this.pvIncidentPowerAd.Name = "pvIncidentPowerAd";
+            this.pvIncidentPowerAd.RowTemplate.Height = 23;
+            this.pvIncidentPowerAd.Size = new System.Drawing.Size(203, 253);
+            this.pvIncidentPowerAd.TabIndex = 19;
+            this.pvIncidentPowerAd.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pvIncidentPowerAd_DataError);
+            this.pvIncidentPowerAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pvIncidentPowerAd_KeyPress);
+            // 
+            // pvOutputPowerAd
+            // 
+            this.pvOutputPowerAd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pvOutputPowerAd.Location = new System.Drawing.Point(213, 69);
+            this.pvOutputPowerAd.Name = "pvOutputPowerAd";
+            this.pvOutputPowerAd.RowTemplate.Height = 23;
+            this.pvOutputPowerAd.Size = new System.Drawing.Size(203, 253);
+            this.pvOutputPowerAd.TabIndex = 18;
+            this.pvOutputPowerAd.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pvOutputPowerAd_DataError);
+            this.pvOutputPowerAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pvOutputPowerAd_KeyPress);
+            // 
+            // pvInputPowerAd
+            // 
+            this.pvInputPowerAd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pvInputPowerAd.Location = new System.Drawing.Point(6, 69);
+            this.pvInputPowerAd.Name = "pvInputPowerAd";
+            this.pvInputPowerAd.RowTemplate.Height = 23;
+            this.pvInputPowerAd.Size = new System.Drawing.Size(203, 253);
+            this.pvInputPowerAd.TabIndex = 17;
+            this.pvInputPowerAd.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pvInputPowerAd_DataError);
+            this.pvInputPowerAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pvInputPowerAd_KeyPress);
+            // 
+            // pvAttCompensation
+            // 
+            this.pvAttCompensation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pvAttCompensation.Location = new System.Drawing.Point(19, 75);
+            this.pvAttCompensation.Name = "pvAttCompensation";
+            this.pvAttCompensation.RowTemplate.Height = 23;
+            this.pvAttCompensation.Size = new System.Drawing.Size(283, 91);
+            this.pvAttCompensation.TabIndex = 21;
+            this.pvAttCompensation.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pvAttCompensation_DataError);
             // 
             // MainForm
             // 
@@ -2082,18 +2083,18 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pvAlcPowerVoltage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pvIncidentPowerAd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pvOutputPowerAd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pvInputPowerAd)).EndInit();
             this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pvAttCompensation)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pvAlcPowerVoltage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pvIncidentPowerAd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pvOutputPowerAd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pvInputPowerAd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pvAttCompensation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
