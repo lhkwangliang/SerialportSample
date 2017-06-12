@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>NrfunrmDtfNJX3oWvTK3IXdZkoY=</dsig:DigestValue>
+        <dsig:DigestValue>S2JAYZ94RWTlxpQawIzU1V9Y6d0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>a3rTtzO3BQL4FzcquNdmIlIlGYY=</dsig:DigestValue>
+        <dsig:DigestValue>BSjxSz/PaWghyJ+vnqHSbhra1S4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SerialportSample.exe" size="185344">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SerialportSample.exe" size="185856">
       <assemblyIdentity name="SerialportSample" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>y34ui90qCnHmJIWIEsIX7UjKlro=</dsig:DigestValue>
+        <dsig:DigestValue>INSsU/6qkmeNotY7OnCdxXNmscE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
