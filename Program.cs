@@ -137,7 +137,8 @@ namespace SerialportSample
             configParam("D040", "pvAlcPowerVoltageValue", 2, "", 0, "uint2", "");
             
             //1894只读参数
-            configParam("F030", "pvFwVersion", 4, "", 0, "table type:uint1+uint1+uint1+uint1*1;scale:0,0,0,0", "");
+            //configParam("F030", "pvFwVersion", 4, "", 0, "table type:uint1+uint1+uint1+uint1*1;scale:0,0,0,0", "");
+            configParam("F030", "pvFwVersion", 4, "", 0, "string", "");
             configParam("D300", "pvFrequencyRange", 1, "", 0, "uint1", "");
             configParam("D301", "pvFrequencyMin", 2, "", 2, "uint2", "MHz");
             configParam("D302", "pvFrequencyMax", 2, "", 2, "uint2", "MHz");

@@ -21,6 +21,7 @@ namespace SerialportSample
         private string currentEditCellValue = "0";
         private System.Timers.Timer onlineTimer = new System.Timers.Timer(20000);
         private System.Timers.Timer pollingTimer = new System.Timers.Timer(3000);   //实例化Timer类，设置间隔时间为3000毫秒
+        private System.Timers.Timer polling1894Timer = new System.Timers.Timer(3000);   //实例化1894Timer类，设置间隔时间为3000毫秒
         private System.Timers.Timer delayTimer = new System.Timers.Timer(500); //解决连续点击微调按钮，反应迟钝的问题
         private SerialPort comm = new SerialPort();
         private StringBuilder builder = new StringBuilder();//避免在事件处理方法中反复的创建，定义到外面。
@@ -30,6 +31,9 @@ namespace SerialportSample
         private byte[] binary_data_1 = new byte[11];//AA 44 05 01 02 03 04 05 EA
 
         private List<byte> sendBuffer = new List<byte>(4096);//发送
+
+        private bool switchGeneral = false;
+        private bool switch1894 = false;
 
         public MainForm()
         {
@@ -193,11 +197,15 @@ namespace SerialportSample
             onlineTimer.Elapsed += new System.Timers.ElapsedEventHandler(unitOffline);
         }
 
-        private void queryUnitParamsTimer() 
+        private void queryUnitParamsTimer()
         {
             pollingTimer.Elapsed += new System.Timers.ElapsedEventHandler(polling); //到达时间的时候执行事件
             pollingTimer.AutoReset = true;   //设置是执行一次（false）还是一直执行(true)
             pollingTimer.Enabled = false;     //是否执行System.Timers.Timer.Elapsed事件
+
+            polling1894Timer.Elapsed += new System.Timers.ElapsedEventHandler(polling1894); //到达时间的时候执行事件
+            polling1894Timer.AutoReset = true;   //设置是执行一次（false）还是一直执行(true)
+            polling1894Timer.Enabled = false;     //是否执行System.Timers.Timer.Elapsed事件
         }
 
         private void initDelayTimer()
@@ -287,15 +295,23 @@ namespace SerialportSample
         {
             this.Invoke((EventHandler)(delegate
                     {
-                        if (isOpen)
+                        if (switchGeneral)
                         {
-                            lbLedUnitState.ButtonColor = Color.Green;
-                            btnConn.Text = "断开功放";
+                            if (isOpen)
+                            {
+                                lbLedUnitState.ButtonColor = Color.Green;
+                                btnConn.Text = "断开功放";
+                            }
+                            else
+                            {
+                                lbLedUnitState.ButtonColor = Color.Red;
+                                btnConn.Text = "连接功放";
+                            }
                         }
                         else
                         {
                             lbLedUnitState.ButtonColor = Color.Red;
-                            btnConn.Text = "连接功放";
+                                btnConn.Text = "连接功放";
                         }
                     }));
         }
@@ -310,6 +326,13 @@ namespace SerialportSample
             queryUnitParams();
             delayOneSeconds();
             queryBaseParams();
+        }
+
+        public void polling1894(object source, System.Timers.ElapsedEventArgs e)
+        {
+            query1894UnitParams();
+            delayOneSeconds();
+            query1894BaseParams();
         }
 
         private SpConfigEntity getSpConfigEntity()
@@ -502,7 +525,16 @@ namespace SerialportSample
                             onlineTimer.Stop();
                             onlineTimer.Start();
                         }
-                        pollingTimer.Start();//启动轮询
+                        if (switchGeneral)
+                        {
+                            pollingTimer.Start();//启动轮询
+                            polling1894Timer.Stop();//关闭1894轮询
+                        }
+                        if(switch1894){
+                            onlineTimer.Stop();
+                            pollingTimer.Stop();
+                            //polling1894Timer.Start(); //改到DF45参数回应后开启轮询
+                        }
 
                         changeUnitState(true);
                         connected = true;
@@ -519,7 +551,7 @@ namespace SerialportSample
                             catch (Exception e1)
                             {
                                 error("ShowUI Error: " + e1.ToString());
-                                MessageBox.Show(e1.Message);
+                                MessageBox.Show("Command:" + command + ": " + e1.Message);
                             }
                         //}
 
@@ -1025,6 +1057,40 @@ namespace SerialportSample
                 }
             }
 
+            response1894(map);
+
+        }
+
+        private void response1894(Dictionary<string, ParamItem> map)
+        {
+            //Packet packet = new Packet();
+            //Dictionary<string, ParamItem> map = packet.parse(binary_data_1);
+            ParamItem pm = new ParamItem();
+
+            //设备参数
+            if (map.ContainsKey("pvReset1894W"))
+            {
+                pm = map["pvReset1894W"];
+                //pvSystemThermometer.Temperature = int.Parse(pm.ParamValue);
+                //lbSystemTemperature.Text = pm.ParamValue + pm.Unit;
+
+                polling1894Timer.Start();
+            }
+            if (map.ContainsKey("pvFwVersion"))
+            {
+                pm = map["pvFwVersion"];
+                try
+                {
+                    string data = pm.ParamValue;
+                    int v1 = data[0];
+                    int v2 = data[1];
+                    int v3 = data[2];
+                    int v4 = data[3];
+                    lbFwVersion.Text = "V" + v1.ToString() + "." + v2.ToString() + "." + v3.ToString() + "." + v4.ToString();
+                }
+                catch (Exception ex) { }
+
+            }
         }
 
         private List<string[]> toList(string data, int length)
@@ -1177,6 +1243,9 @@ namespace SerialportSample
 
         private void btnConn_Click(object sender, EventArgs e)
         {
+            switchGeneral = true;
+            switch1894 = false;
+
             if (!onlineTimer.Enabled)
             {
                 onlineTimer.Start();
@@ -1189,6 +1258,7 @@ namespace SerialportSample
             else
             {
                 pollingTimer.Start();
+
                 List<ParamItem> paramList = new List<ParamItem>();
                 ParamItem pm = null;
                 pm = new ParamItem("8045", "pvSystemThermometer", 1, "0", 0, "sint1", "℃");
@@ -1216,6 +1286,16 @@ namespace SerialportSample
             pm = new ParamItem("F018", "pvSoftwareVersion", 2, "0", 0, "uint2", "");
             paramList.Add(pm);
             pm = new ParamItem("F019", "pvProductSerial", 20, "0", 0, "string", "");
+            paramList.Add(pm);
+
+            serialQueryBase(paramList);
+        }
+
+        private void query1894BaseParams()
+        {
+            List<ParamItem> paramList = new List<ParamItem>();
+            ParamItem pm = null;
+            pm = new ParamItem("F030", "pvFwVersion", 4, "0", 0, "string", "");
             paramList.Add(pm);
 
             serialQueryBase(paramList);
@@ -1373,12 +1453,12 @@ namespace SerialportSample
         }
 
         //轮询1894参数
-        private void query1894Params()
+        private void query1894UnitParams()
         {
             List<ParamItem> paramList = new List<ParamItem>();
             ParamItem pm = null;
-            pm = new ParamItem("F030", "pvFwVersion", 4, "00000000", 0, "table type:uint1+uint1+uint1+uint1*1;scale:0,0,0,0", "");
-            paramList.Add(pm);
+            //pm = new ParamItem("F030", "pvFwVersion", 4, "00000000", 0, "table type:uint1+uint1+uint1+uint1*1;scale:0,0,0,0", "");
+            //paramList.Add(pm);
             pm = new ParamItem("D300", "pvFrequencyRange", 1, "0", 0, "uint1", "");
             paramList.Add(pm);
             pm = new ParamItem("D301", "pvFrequencyMin", 2, "0", 2, "uint2", "MHz");
@@ -1401,6 +1481,8 @@ namespace SerialportSample
             paramList.Add(pm);
             pm = new ParamItem("D30A", "pvOperationMode", 1, "0", 0, "uint1", "");
             paramList.Add(pm);
+
+            serialQuery(paramList);
         }
 
         /// <summary>  
@@ -1428,6 +1510,8 @@ namespace SerialportSample
                 else
                 {
                     if (pollingTimer.Enabled) pollingTimer.Stop();
+
+                    if (polling1894Timer.Enabled) polling1894Timer.Stop();
                 }
             }
             catch (Exception e1)
@@ -1435,6 +1519,7 @@ namespace SerialportSample
                 this.Invoke((EventHandler)(delegate
                 {
                     pollingTimer.Enabled = false;
+                    polling1894Timer.Enabled = false;
                 }));
                 MessageBox.Show("发送数据失败: " + e1.Message);
             }
@@ -1454,45 +1539,94 @@ namespace SerialportSample
 
         private void serialSet(List<ParamItem> paramList)
         {
-            //设置参数时，先停掉当前的轮询
-            bool flag = pollingTimer.Enabled;
-            if (flag) pollingTimer.Stop();
-
-            Packet packet = new SetPacket();
-            serialSend(packet, paramList);
-
-            if (flag)
+            if (switchGeneral)
             {
-                delayOneSeconds();
-                pollingTimer.Start();
+                //设置参数时，先停掉当前的轮询
+                bool flag = pollingTimer.Enabled;
+                if (flag) pollingTimer.Stop();
+
+                Packet packet = new SetPacket();
+                serialSend(packet, paramList);
+
+                if (flag)
+                {
+                    delayOneSeconds();
+                    pollingTimer.Start();
+                }
+            }
+            if (switch1894)
+            {
+                //设置参数时，先停掉当前的轮询
+                bool flag = polling1894Timer.Enabled;
+                if (flag) polling1894Timer.Stop();
+
+                Packet packet = new SetPacket();
+                serialSend(packet, paramList);
+
+                if (flag)
+                {
+                    delayOneSeconds();
+                    polling1894Timer.Start();
+                }
             }
         }
 
         public void serialSetBase(List<ParamItem> paramList)
         {
-            //设置参数时，先停掉当前的轮询
-            bool flag = pollingTimer.Enabled;
-            if (flag) pollingTimer.Stop();
-
-            Packet packet = new SetBasePacket();
-            serialSend(packet, paramList);
-
-            if (flag)
+            if (switchGeneral)
             {
-                delayOneSeconds();
-                pollingTimer.Start();
+                //设置参数时，先停掉当前的轮询
+                bool flag = pollingTimer.Enabled;
+                if (flag) pollingTimer.Stop();
+
+                Packet packet = new SetBasePacket();
+                serialSend(packet, paramList);
+
+                if (flag)
+                {
+                    delayOneSeconds();
+                    pollingTimer.Start();
+                }
+            }
+            if (switch1894)
+            {
+                //设置参数时，先停掉当前的轮询
+                bool flag = polling1894Timer.Enabled;
+                if (flag) polling1894Timer.Stop();
+
+                Packet packet = new SetBasePacket();
+                serialSend(packet, paramList);
+
+                if (flag)
+                {
+                    delayOneSeconds();
+                    polling1894Timer.Start();
+                }
             }
         }
 
         private void serialSpecSet(List<ParamItem> paramList)
         {
-            if (pollingTimer.Enabled) pollingTimer.Stop();
+            if (switchGeneral)
+            {
+                if (pollingTimer.Enabled) pollingTimer.Stop();
 
-            Packet packet = new SpecSetPacket();
-            serialSend(packet, paramList);
+                Packet packet = new SpecSetPacket();
+                serialSend(packet, paramList);
 
-            delayOneSeconds();
-            pollingTimer.Start();
+                delayOneSeconds();
+                pollingTimer.Start();
+            }
+            if (switch1894)
+            {
+                if (polling1894Timer.Enabled) polling1894Timer.Stop();
+
+                Packet packet = new SpecSetPacket();
+                serialSend(packet, paramList);
+
+                delayOneSeconds();
+                polling1894Timer.Start();
+            }
         }
 
         private void toolStripMenuItem_Click(object sender, EventArgs e)
@@ -2886,6 +3020,8 @@ namespace SerialportSample
 
         private void btnReset1894_Click(object sender, EventArgs e)
         {
+            switchGeneral = false;
+            switch1894 = true;
             if (lbLedUnitState.ButtonColor != Color.Red)
             {
                 changeUnitState(false);
@@ -2894,6 +3030,16 @@ namespace SerialportSample
             {
                 pollingTimer.Stop();
             }
+            
+            polling1894Timer.Start();
+            List<ParamItem> paramList = new List<ParamItem>();
+            ParamItem pm = null;
+            pm = new ParamItem("DF45", "pvReset1894W", 1, "0", 0, "uint1", "");
+            paramList.Add(pm);
+
+            //serialQuery(paramList);
+            serialSet(paramList);
+            
         }
 
     }

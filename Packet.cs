@@ -233,11 +233,14 @@ namespace SerialportSample
 
         private ParamItem newParamItem(List<byte> buffer)
         {
+            string paramId = "";
+            byte[] pv = new byte[3];
+            string paramType = "";
             try
             {
-                string paramId = getParamId(buffer, 0, 2).ToUpper();
+                paramId = getParamId(buffer, 0, 2).ToUpper();
                 int paramLength = getParamLength(buffer, 2);
-                byte[] pv = getParamValue(buffer, 3, paramLength);
+                pv = getParamValue(buffer, 3, paramLength);
                 buffer.RemoveRange(0, paramLength + 3);
 
                 if (!Program.paramsMap.ContainsKey(paramId))
@@ -245,7 +248,7 @@ namespace SerialportSample
                     return null;
                 }
                 ParamItem paramItem = Program.paramsMap[paramId];
-                string paramType = paramItem.Type;
+                paramType = paramItem.Type;
                 int paramScale = paramItem.Scale;
                 string paramName = paramItem.ParamName;
                 string paramUnit = paramItem.Unit;
@@ -368,7 +371,7 @@ namespace SerialportSample
             catch (Exception e)
             {
                 //解析参数失败
-                throw new Exception("解析参数失败: " + e.Message);
+                throw new Exception("解析参数失败: paramId:" + paramId + ",paramType:" + paramType + ", pv:" + System.Text.Encoding.ASCII.GetString(pv) + ", " + e.Message);
             }
         }
 
