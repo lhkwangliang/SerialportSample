@@ -45,7 +45,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 12);
             this.label1.TabIndex = 0;
-            this.label1.Text = "版本：1.0";
+            this.label1.Text = "版本：1.1";
             // 
             // label2
             // 
@@ -59,16 +59,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 178);
+            this.label3.Location = new System.Drawing.Point(43, 201);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(161, 12);
             this.label3.TabIndex = 3;
             this.label3.Text = "邮箱：lhkwangliang@163.com";
+            this.label3.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 203);
+            this.label4.Location = new System.Drawing.Point(43, 180);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(119, 12);
             this.label4.TabIndex = 4;
@@ -100,7 +101,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 12);
             this.label5.TabIndex = 6;
-            this.label5.Text = "时间：2017-03-15";
+            this.label5.Text = "时间：2017-06-25";
             // 
             // AboutForm
             // 
