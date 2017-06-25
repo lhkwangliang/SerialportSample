@@ -97,7 +97,8 @@ namespace SerialportSample
                                 float value3 = float.Parse(val[2]) * 2;
                                 if (value3 < 0)
                                 {
-                                    value3 = 127 - value3;
+                                    //value3 = 127 - value3;
+                                    value3 = 256 + value3;
                                 }
                                 buffer.Add(byte.Parse(value3.ToString()));
                             }
@@ -119,7 +120,8 @@ namespace SerialportSample
                         int value = int.Parse(calcScale(paramItem));
                         if (value < 0)
                         {
-                            value = 127 - value;
+                            //value = 127 - value;
+                            value = 256 + value;
                         }
                         buffer.Add(byte.Parse(value.ToString()));
                     }
@@ -308,7 +310,8 @@ namespace SerialportSample
                             }
                             else
                             {
-                                value3 = 127 - t;
+                                //value3 = 127 - t;
+                                value3 = t - 256;
                             }
                             value3 = value3 / 2;
                             sb.Append(value1);
@@ -342,7 +345,8 @@ namespace SerialportSample
                         }
                         else
                         {
-                            value = 127 - t;
+                            //value = 127 - t;
+                            value = t - 256;
                         }
                     }
                     else if (paramType == "uint1")
