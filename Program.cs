@@ -142,11 +142,11 @@ namespace SerialportSample
             configParam("D300", "pvFrequencyRange", 1, "", 0, "uint1", "");
             configParam("D301", "pvFrequencyMin", 2, "", 2, "uint2", "MHz");
             configParam("D302", "pvFrequencyMax", 2, "", 2, "uint2", "MHz");
-            configParam("D303", "pvRfinAgcPdet", 1, "", 0, "uint1", "");
-            configParam("D304", "pvRffbAgc", 1, "", 0, "uint1", "");
-            configParam("D305", "pvRfinPowerPmu", 2, "", 100, "sint2", "");
-            configParam("D306", "pvRffbPowerPmu", 2, "", 100, "sint2", "");
-            configParam("D307", "pvAverageCoeff", 2, "", 10, "uint2", "");
+            configParam("D303", "pvRfinAgcPdet", 1, "", 0, "uint1", "MHz");
+            configParam("D304", "pvRffbAgc", 1, "", 0, "uint1", "MHz");
+            configParam("D305", "pvRfinPowerPmu", 2, "", 100, "sint2", "MHz");
+            configParam("D306", "pvRffbPowerPmu", 2, "", 100, "sint2", "MHz");
+            configParam("D307", "pvAverageCoeff", 2, "", 10, "uint2", "MHz");
             configParam("D308", "pvAlarmStatus", 1, "", 0, "uint1", "");
             configParam("D309", "pvOverallStatus", 1, "", 0, "uint1", "");
             configParam("D30A", "pvOperationMode", 1, "", 0, "uint1", "");

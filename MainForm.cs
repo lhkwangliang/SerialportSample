@@ -1089,8 +1089,136 @@ namespace SerialportSample
                     lbFwVersion.Text = "V" + v1.ToString() + "." + v2.ToString() + "." + v3.ToString() + "." + v4.ToString();
                 }
                 catch (Exception ex) { }
-
             }
+            if (map.ContainsKey("pvFrequencyRange"))
+            {
+                pm = map["pvFrequencyRange"];
+                switch (pm.ParamValue)
+                {
+                    case "1":
+                        lbFrequencyRange.Text = "225~260MHz";
+                        break;
+                    case "2":
+                        lbFrequencyRange.Text = "260~520MHz";
+                        break;
+                    case "3":
+                        lbFrequencyRange.Text = "225~960MHz";
+                        break;
+                    case "4":
+                        lbFrequencyRange.Text = "520~1040MHz";
+                        break;
+                    case "5":
+                        lbFrequencyRange.Text = "1040~2080MHz";
+                        break;
+                    case "6":
+                        lbFrequencyRange.Text = "698~2700MHz";
+                        break;
+                    case "7":
+                        lbFrequencyRange.Text = "1800~2700MHz";
+                        break;
+                    case "8":
+                        lbFrequencyRange.Text = "2700~3500MHz";
+                        break;
+                    case "9":
+                        lbFrequencyRange.Text = "3300~3800MHz";
+                        break;
+                }
+                
+            }
+            if (map.ContainsKey("pvFrequencyMin"))
+            {
+                pm = map["pvFrequencyMin"];
+                lbFrequencyMin.Text = pm.ParamValue + pm.Unit;
+            }
+            if (map.ContainsKey("pvFrequencyMax"))
+            {
+                pm = map["pvFrequencyMax"];
+                lbFrequencyMax.Text = pm.ParamValue + pm.Unit;
+            }
+            if (map.ContainsKey("pvRfinAgcPdet"))
+            {
+                pm = map["pvRfinAgcPdet"];
+                lbRfinAgcPdet.Text = pm.ParamValue + pm.Unit;
+            }
+            if (map.ContainsKey("pvRffbAgc"))
+            {
+                pm = map["pvRffbAgc"];
+                lbRffbAgc.Text = pm.ParamValue + pm.Unit;
+            }
+            if (map.ContainsKey("pvRfinPowerPmu"))
+            {
+                pm = map["pvRfinPowerPmu"];
+                lbRfinPowerPmu.Text = pm.ParamValue + pm.Unit;
+            }
+            if (map.ContainsKey("pvRffbPowerPmu"))
+            {
+                pm = map["pvRffbPowerPmu"];
+                lbRffbPowerPmu.Text = pm.ParamValue + pm.Unit;
+            }
+            if (map.ContainsKey("pvAverageCoeff"))
+            {
+                pm = map["pvAverageCoeff"];
+                lbAverageCoeff.Text = pm.ParamValue + pm.Unit;
+            }
+            if (map.ContainsKey("pvAlarmStatus"))
+            {
+                pm = map["pvAlarmStatus"];
+                byte status = byte.Parse(pm.ParamValue);
+                getAlarmStatus(status);
+            }
+            if (map.ContainsKey("pvOverallStatus"))
+            {
+                pm = map["pvOverallStatus"];
+                byte status = byte.Parse(pm.ParamValue);
+                getOverAllStatus(status);
+            }
+            if (map.ContainsKey("pvOperationMode"))
+            {
+                pm = map["pvOperationMode"];
+                switch (pm.ParamValue)
+                {
+                    case "0":
+                        lbOperationMode.Text = "Optiomized Correction Mode";
+                        break;
+                    case "1":
+                        lbOperationMode.Text = "Smooth Adaptation Mode";
+                        break;
+                }
+            }
+        }
+
+        private void getAlarmStatus(byte byData)
+        {
+            //根据uint1类型数据的8位中的每一位判断告警
+            lbbAlarmStatus1.ButtonColor = (byData & 0x02) == 0x02 ? Color.Red : Color.Green;
+            lbbAlarmStatus2.ButtonColor = (byData & 0x04) == 0x04 ? Color.Red : Color.Green;
+            lbbAlarmStatus3.ButtonColor = (byData & 0x08) == 0x08 ? Color.Red : Color.Green;
+            lbbAlarmStatus4.ButtonColor = (byData & 0x10) == 0x10 ? Color.Red : Color.Green;
+            lbbAlarmStatus5.ButtonColor = (byData & 0x20) == 0x20 ? Color.Red : Color.Green;
+            lbbAlarmStatus6.ButtonColor = (byData & 0x40) == 0x40 ? Color.Red : Color.Green;
+            lbbAlarmStatus7.ButtonColor = (byData & 0x80) == 0x80 ? Color.Red : Color.Green;
+            
+        }
+        private void getOverAllStatus(byte byData)
+        {
+            //根据uint1类型数据的8位中的每一位判断状态
+            bool n0, n1, n2, n3, n4, n5, n6, n7;
+            n0 = (byData & 0x01) == 0x01 ? true : false;//uint1的第一位为1返回true,为0返回false
+            n1 = (byData & 0x02) == 0x02 ? true : false;//uint1的第二位为1返回true,为0返回false
+            n2 = (byData & 0x04) == 0x04 ? true : false;
+            n3 = (byData & 0x08) == 0x08 ? true : false;
+            n4 = (byData & 0x10) == 0x10 ? true : false;
+            n5 = (byData & 0x20) == 0x20 ? true : false;
+            n6 = (byData & 0x40) == 0x40 ? true : false;
+            n7 = (byData & 0x80) == 0x80 ? true : false;
+
+            if (!n0 && !n1 && !n2 && !n3 && !n4 && !n5) lbOverallStatus.Text = "INIT"; //000000
+            if (n0 && !n1 && !n2 && !n3 && !n4 && !n5) lbOverallStatus.Text = "FSA"; //000001
+            if (n0 && n1 && !n2 && !n3 && !n4 && !n5) lbOverallStatus.Text = "TRACK"; //000011
+            if (!n0 && n1 && n2 && !n3 && !n4 && !n5) lbOverallStatus.Text = "CAL"; //000110
+            if (n0 && !n1 && !n2 && n3 && !n4 && !n5) lbOverallStatus.Text = "PDET"; //001001
+            if (n7) lbOverallStatus.Text = "Error occurred";
+            if (n6) lbOverallStatus.Text = "Warning occurred";
         }
 
         private List<string[]> toList(string data, int length)
@@ -1297,7 +1425,6 @@ namespace SerialportSample
             ParamItem pm = null;
             pm = new ParamItem("F030", "pvFwVersion", 4, "0", 0, "string", "");
             paramList.Add(pm);
-
             serialQueryBase(paramList);
         }
 
@@ -3036,7 +3163,6 @@ namespace SerialportSample
             ParamItem pm = null;
             pm = new ParamItem("DF45", "pvReset1894W", 1, "0", 0, "uint1", "");
             paramList.Add(pm);
-
             //serialQuery(paramList);
             serialSet(paramList);
             
