@@ -128,19 +128,6 @@
             this.btnAttCompensation = new System.Windows.Forms.Button();
             this.pvAttCompensation = new HMIControls.MyDataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnFrequencyRange = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label43 = new System.Windows.Forms.Label();
             this.lbOperationMode = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.lbOverallStatus = new System.Windows.Forms.Label();
@@ -206,6 +193,19 @@
             this.lbbAlarmStatus7 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.lbbAlarmStatus1 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.lbAlarmStatus1 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.stFrequencyRange = new System.Windows.Forms.ComboBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.stOutputControl = new System.Windows.Forms.ComboBox();
+            this.btnSetCal = new System.Windows.Forms.Button();
+            this.btnFrequencyRange = new System.Windows.Forms.Button();
+            this.btnOutputControl = new System.Windows.Forms.Button();
+            this.stFrequencyMin = new System.Windows.Forms.NumericUpDown();
+            this.btnFrequencyMin = new System.Windows.Forms.Button();
+            this.stFrequencyMax = new System.Windows.Forms.NumericUpDown();
+            this.btnFrequencyMax = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -219,6 +219,8 @@
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stFrequencyMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stFrequencyMax)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOpenClose
@@ -1403,6 +1405,10 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage5.Controls.Add(this.btnFrequencyMax);
+            this.tabPage5.Controls.Add(this.stFrequencyMax);
+            this.tabPage5.Controls.Add(this.btnFrequencyMin);
+            this.tabPage5.Controls.Add(this.stFrequencyMin);
             this.tabPage5.Controls.Add(this.lbbAlarmStatus7);
             this.tabPage5.Controls.Add(this.lbbAlarmStatus6);
             this.tabPage5.Controls.Add(this.lbbAlarmStatus5);
@@ -1410,18 +1416,14 @@
             this.tabPage5.Controls.Add(this.lbbAlarmStatus3);
             this.tabPage5.Controls.Add(this.lbbAlarmStatus1);
             this.tabPage5.Controls.Add(this.lbbAlarmStatus2);
-            this.tabPage5.Controls.Add(this.button5);
-            this.tabPage5.Controls.Add(this.button4);
-            this.tabPage5.Controls.Add(this.button3);
+            this.tabPage5.Controls.Add(this.btnOutputControl);
             this.tabPage5.Controls.Add(this.btnFrequencyRange);
-            this.tabPage5.Controls.Add(this.button1);
-            this.tabPage5.Controls.Add(this.comboBox2);
+            this.tabPage5.Controls.Add(this.btnSetCal);
+            this.tabPage5.Controls.Add(this.stOutputControl);
             this.tabPage5.Controls.Add(this.label46);
-            this.tabPage5.Controls.Add(this.textBox2);
-            this.tabPage5.Controls.Add(this.textBox1);
             this.tabPage5.Controls.Add(this.label45);
             this.tabPage5.Controls.Add(this.label44);
-            this.tabPage5.Controls.Add(this.comboBox1);
+            this.tabPage5.Controls.Add(this.stFrequencyRange);
             this.tabPage5.Controls.Add(this.label43);
             this.tabPage5.Controls.Add(this.lbOperationMode);
             this.tabPage5.Controls.Add(this.label42);
@@ -1459,130 +1461,6 @@
             this.tabPage5.Size = new System.Drawing.Size(834, 476);
             this.tabPage5.TabIndex = 7;
             this.tabPage5.Text = "1894";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(603, 186);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 71;
-            this.button5.Text = "设置";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(603, 153);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 70;
-            this.button4.Text = "设置";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(603, 118);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 69;
-            this.button3.Text = "设置";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // btnFrequencyRange
-            // 
-            this.btnFrequencyRange.Location = new System.Drawing.Point(603, 80);
-            this.btnFrequencyRange.Name = "btnFrequencyRange";
-            this.btnFrequencyRange.Size = new System.Drawing.Size(75, 23);
-            this.btnFrequencyRange.TabIndex = 68;
-            this.btnFrequencyRange.Text = "设置";
-            this.btnFrequencyRange.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(476, 227);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 23);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Set Cal Param A";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "RFOUT DISABLED",
-            "RFOUT ENABLED"});
-            this.comboBox2.Location = new System.Drawing.Point(476, 188);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 20);
-            this.comboBox2.TabIndex = 33;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(366, 191);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(89, 12);
-            this.label46.TabIndex = 32;
-            this.label46.Text = "Output Control";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(476, 155);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 21);
-            this.textBox2.TabIndex = 31;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(476, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 21);
-            this.textBox1.TabIndex = 30;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(402, 158);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(53, 12);
-            this.label45.TabIndex = 29;
-            this.label45.Text = "最大频率";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(402, 123);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(53, 12);
-            this.label44.TabIndex = 28;
-            this.label44.Text = "最小频率";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "225-260 MHz",
-            "260-520 MHz",
-            "225-960 MHz",
-            "520-1040 MHz",
-            "1040-2080 MHz",
-            "698-2700 MHz",
-            "1800-2700 MHz",
-            "2700-3500 MHz",
-            "3300-3800 MHz"});
-            this.comboBox1.Location = new System.Drawing.Point(476, 82);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 27;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(402, 85);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(53, 12);
-            this.label43.TabIndex = 26;
-            this.label43.Text = "频率范围";
             // 
             // lbOperationMode
             // 
@@ -2235,6 +2113,145 @@
             this.lbAlarmStatus1.TabIndex = 21;
             this.lbAlarmStatus1.Text = "Internal Temp Alarm";
             // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(402, 85);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(53, 12);
+            this.label43.TabIndex = 26;
+            this.label43.Text = "频率范围";
+            // 
+            // stFrequencyRange
+            // 
+            this.stFrequencyRange.FormattingEnabled = true;
+            this.stFrequencyRange.Items.AddRange(new object[] {
+            "225-260 MHz",
+            "260-520 MHz",
+            "225-960 MHz",
+            "520-1040 MHz",
+            "1040-2080 MHz",
+            "698-2700 MHz",
+            "1800-2700 MHz",
+            "2700-3500 MHz",
+            "3300-3800 MHz"});
+            this.stFrequencyRange.Location = new System.Drawing.Point(476, 82);
+            this.stFrequencyRange.Name = "stFrequencyRange";
+            this.stFrequencyRange.Size = new System.Drawing.Size(121, 20);
+            this.stFrequencyRange.TabIndex = 27;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(402, 123);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(53, 12);
+            this.label44.TabIndex = 28;
+            this.label44.Text = "最小频率";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(402, 158);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(53, 12);
+            this.label45.TabIndex = 29;
+            this.label45.Text = "最大频率";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(366, 191);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(89, 12);
+            this.label46.TabIndex = 32;
+            this.label46.Text = "Output Control";
+            // 
+            // stOutputControl
+            // 
+            this.stOutputControl.FormattingEnabled = true;
+            this.stOutputControl.Items.AddRange(new object[] {
+            "RFOUT DISABLED",
+            "RFOUT ENABLED"});
+            this.stOutputControl.Location = new System.Drawing.Point(476, 188);
+            this.stOutputControl.Name = "stOutputControl";
+            this.stOutputControl.Size = new System.Drawing.Size(121, 20);
+            this.stOutputControl.TabIndex = 33;
+            // 
+            // btnSetCal
+            // 
+            this.btnSetCal.Location = new System.Drawing.Point(476, 227);
+            this.btnSetCal.Name = "btnSetCal";
+            this.btnSetCal.Size = new System.Drawing.Size(122, 23);
+            this.btnSetCal.TabIndex = 34;
+            this.btnSetCal.Text = "Set Cal Param A";
+            this.btnSetCal.UseVisualStyleBackColor = true;
+            this.btnSetCal.Click += new System.EventHandler(this.btnSetCal_Click);
+            // 
+            // btnFrequencyRange
+            // 
+            this.btnFrequencyRange.Location = new System.Drawing.Point(603, 80);
+            this.btnFrequencyRange.Name = "btnFrequencyRange";
+            this.btnFrequencyRange.Size = new System.Drawing.Size(75, 23);
+            this.btnFrequencyRange.TabIndex = 68;
+            this.btnFrequencyRange.Text = "设置";
+            this.btnFrequencyRange.UseVisualStyleBackColor = true;
+            this.btnFrequencyRange.Click += new System.EventHandler(this.btnFrequencyRange_Click);
+            // 
+            // btnOutputControl
+            // 
+            this.btnOutputControl.Location = new System.Drawing.Point(603, 186);
+            this.btnOutputControl.Name = "btnOutputControl";
+            this.btnOutputControl.Size = new System.Drawing.Size(75, 23);
+            this.btnOutputControl.TabIndex = 71;
+            this.btnOutputControl.Text = "设置";
+            this.btnOutputControl.UseVisualStyleBackColor = true;
+            this.btnOutputControl.Click += new System.EventHandler(this.btnOutputControl_Click);
+            // 
+            // stFrequencyMin
+            // 
+            this.stFrequencyMin.Location = new System.Drawing.Point(476, 120);
+            this.stFrequencyMin.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.stFrequencyMin.Name = "stFrequencyMin";
+            this.stFrequencyMin.Size = new System.Drawing.Size(120, 21);
+            this.stFrequencyMin.TabIndex = 73;
+            // 
+            // btnFrequencyMin
+            // 
+            this.btnFrequencyMin.Location = new System.Drawing.Point(603, 118);
+            this.btnFrequencyMin.Name = "btnFrequencyMin";
+            this.btnFrequencyMin.Size = new System.Drawing.Size(75, 23);
+            this.btnFrequencyMin.TabIndex = 74;
+            this.btnFrequencyMin.Text = "设置";
+            this.btnFrequencyMin.UseVisualStyleBackColor = true;
+            this.btnFrequencyMin.Click += new System.EventHandler(this.btnFrequencyMin_Click);
+            // 
+            // stFrequencyMax
+            // 
+            this.stFrequencyMax.Location = new System.Drawing.Point(475, 156);
+            this.stFrequencyMax.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.stFrequencyMax.Name = "stFrequencyMax";
+            this.stFrequencyMax.Size = new System.Drawing.Size(120, 21);
+            this.stFrequencyMax.TabIndex = 75;
+            // 
+            // btnFrequencyMax
+            // 
+            this.btnFrequencyMax.Location = new System.Drawing.Point(603, 153);
+            this.btnFrequencyMax.Name = "btnFrequencyMax";
+            this.btnFrequencyMax.Size = new System.Drawing.Size(75, 23);
+            this.btnFrequencyMax.TabIndex = 76;
+            this.btnFrequencyMax.Text = "设置";
+            this.btnFrequencyMax.UseVisualStyleBackColor = true;
+            this.btnFrequencyMax.Click += new System.EventHandler(this.btnFrequencyMax_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2276,6 +2293,8 @@
             this.tabPage6.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stFrequencyMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stFrequencyMax)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2431,19 +2450,6 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label lbOperationMode;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnFrequencyRange;
         private System.Windows.Forms.ToolStripMenuItem menu1894;
         private System.Windows.Forms.Label lbAlarmStatus7;
         private System.Windows.Forms.Label lbAlarmStatus6;
@@ -2459,5 +2465,18 @@
         private LBSoft.IndustrialCtrls.Buttons.LBButton lbbAlarmStatus3;
         private LBSoft.IndustrialCtrls.Buttons.LBButton lbbAlarmStatus1;
         private System.Windows.Forms.Label lbAlarmStatus1;
+        private System.Windows.Forms.Button btnFrequencyMax;
+        private System.Windows.Forms.NumericUpDown stFrequencyMax;
+        private System.Windows.Forms.Button btnFrequencyMin;
+        private System.Windows.Forms.NumericUpDown stFrequencyMin;
+        private System.Windows.Forms.Button btnOutputControl;
+        private System.Windows.Forms.Button btnFrequencyRange;
+        private System.Windows.Forms.Button btnSetCal;
+        private System.Windows.Forms.ComboBox stOutputControl;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.ComboBox stFrequencyRange;
+        private System.Windows.Forms.Label label43;
     }
 }

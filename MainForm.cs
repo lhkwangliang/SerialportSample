@@ -3168,5 +3168,60 @@ namespace SerialportSample
             
         }
 
+        private void btnFrequencyRange_Click(object sender, EventArgs e)
+        {
+            int value = stFrequencyRange.SelectedIndex + 1;
+            List<ParamItem> paramList = new List<ParamItem>();
+            ParamItem pm = null;
+            pm = new ParamItem("DF40", "pvFrequencyRangeW", 1, value+"", 0, "uint1", "");
+            paramList.Add(pm);
+            serialSet(paramList);
+            logger("设置频率范围: " + stFrequencyRange.SelectedText + "(" + value + ")");
+        }
+
+        private void btnFrequencyMin_Click(object sender, EventArgs e)
+        {
+            string value = stFrequencyMin.Value.ToString();
+            List<ParamItem> paramList = new List<ParamItem>();
+            ParamItem pm = null;
+            pm = new ParamItem("DF41", "pvFrequencyMinW", 2, value, 2, "uint2", "");
+            paramList.Add(pm);
+            serialSet(paramList);
+            logger("设置最小频率: " + value);
+        }
+
+        private void btnFrequencyMax_Click(object sender, EventArgs e)
+        {
+            string value = stFrequencyMax.Value.ToString();
+            List<ParamItem> paramList = new List<ParamItem>();
+            ParamItem pm = null;
+            pm = new ParamItem("DF42", "pvFrequencyMaxW", 2, value, 2, "uint2", "");
+            paramList.Add(pm);
+            serialSet(paramList);
+            logger("设置最大频率: " + value);
+        }
+
+        private void btnOutputControl_Click(object sender, EventArgs e)
+        {
+            int value = stOutputControl.SelectedIndex;
+            List<ParamItem> paramList = new List<ParamItem>();
+            ParamItem pm = null;
+            pm = new ParamItem("DF43", "pvOutputControlW", 1, value + "", 0, "uint1", "");
+            paramList.Add(pm);
+            serialSet(paramList);
+            logger("设置输出控制: " + stOutputControl.SelectedText + "(" + value + ")");
+        }
+
+        private void btnSetCal_Click(object sender, EventArgs e)
+        {
+            List<ParamItem> paramList = new List<ParamItem>();
+            ParamItem pm = null;
+            pm = new ParamItem("DF44", "pvSetCalParamAW", 1, "0", 0, "uint1", "");
+            paramList.Add(pm);
+            serialSet(paramList);
+            //serialSetBase(paramList);
+            logger("设置Set Cal Param A: 0");
+        }
+
     }
 }
